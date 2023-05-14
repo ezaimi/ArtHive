@@ -1,0 +1,67 @@
+
+  
+  .about_conteiner{
+      display: flex;
+      margin-top: 40px;
+  
+      
+      }
+
+
+  .about_text{
+      margin-top: -20px;
+      margin-left: 80px;
+      width: 50%;
+  
+  }
+  #about_title{
+      font-size: 50px;
+      margin-bottom: 15px;
+      font-family: 'Glacial indifference';
+  
+  }
+  
+  #about_paragraph1{
+      font-family:'Times New Roman', Times, serif;
+   width: 75%;
+   font-size: 18px;
+   margin-top: 0;
+   margin-bottom: 20px;
+  }
+  
+  #about_footer{
+      width: 90%;
+      font-size: 25px;
+      margin-bottom: 10px;
+  }
+  
+  .about_photo{
+   margin-left: -20px;
+   margin-top: 60px;
+  }
+  
+  
+  #about_icon{
+      width: 400px;
+      /* height: 600px; */
+      margin-left:80px;
+      margin-top: -120px;
+      background-color: transparent;
+  }
+  
+.about_iconBackground{
+      margin-top: -480px;
+      background-color: #00aaae;
+      height: 320px;
+      width: 350px;
+      margin-left: 80px;
+  }
+  
+  #about_getReady{
+  height: 42px;
+  width: 140px;
+  background-color: #ffffff;
+  border: 2px solid rgb(37, 36, 36);
+  }
+  
+  
