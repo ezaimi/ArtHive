@@ -151,7 +151,7 @@ video::-webkit-media-controls {
 }
 .ArtSide{
   position: relative;
-  z-index: 1001;
+
   width: 0px;
   left: 82%;
   top: -80px;
