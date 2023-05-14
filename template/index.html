@@ -17,104 +17,132 @@
             font-family: myFont;
             src: url(TTChocolatesExtraBold.otf);
         }
-        
     </style>
 
-    
 
-<link rel="stylesheet" href="./css/home_css/home.css">
-<link rel="stylesheet" href="./css/about_css/about.css">
+    <!--CSS files here-->
+    <link rel="stylesheet" href="./css/home_css/home.css">
+    <link rel="stylesheet" href="./css/about_css/about.css">
     <link rel="stylesheet" href="preloader.css">
 </head>
 
 <body>
+    <!--Preloader Start-->
+    <div id="preloader"></div>
 
-    <div id="preloader">
 
-    </div>
     <header>
 
         <div class="homePage">
             <div class="nav">
-              <div class="homeSquare">
-                <a href="#" id="homePage">Home</a>
-              </div>
-        
-        
-        
-              <a href="#" id="aboutPage">About</a>
-              <a href="#" id="CatalogPage">Catalog</a>
-              <a href="#" id="BuyPage">Buy</a>
-              <a href="#" id="SellPage">Sell</a>
-              <a href="#" id="ContactPage">Contact</a>
-              <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar">
-              <button type="submit" class="searchButton"><i class="fas fa-search"></i></button>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="horziontalLine"></span>
-            </div>
-    </div>
-    </header> 
-    
-    <!-- <h1 id="zzz" style="background-color: blue;">looo000000000000000000000000000l</h1> -->
-     <div class="title">
-        <h1>"DISCOVER ART. COLLECT JOY."</h1><br><br>
-        <h4>WHERE CREATIVITY MEETS ACCESSIBILITY</h4>
-      </div>
+                <div class="homeSquare">
+                    <a href="#" id="homePage">Home</a>
+                </div>
 
-      <div class="content">
-    </div>
+
+
+                <a href="#" id="aboutPage">About</a>
+                <a href="#" id="CatalogPage">Catalog</a>
+                <a href="#" id="BuyPage">Buy</a>
+                <a href="#" id="SellPage">Sell</a>
+                <a href="#" id="ContactPage">Contact</a>
+                <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar">
+                <button type="submit" class="searchButton"><i class="fas fa-search"></i></button>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="horziontalLine"></span>
+            </div>
+        </div>
+    </header>
+
 
 
 
     <!--Start Slider-->
-  
-<!-- David Work -->
-  <!-- ....................................................................................... -->
 
-        <div class="about-area">
-            <div class="about_conteiner">
-                <div class="about_text">
-                <h3 id="about_title">WELCOME TO ArtHive</h3>
-                
-                    <p id="about_paragraph1">The ultimate platform for art lovers and collectors! 
-                        Here you can discover a vast collection of breathtaking artwork from emerging and established artists around the world. 
-                        From captivating paintings to stunning sculptures, our diverse range of categories ensures that there is something for everyone.  </p>
-                
-                        <p id="about_paragraph1">With ArtHive, you can conveniently browse and purchase
-                            your favorite pieces online, while our secure payment
-                            methods ensure a hassle-free transaction. Our platform also
-                            offers personalized profiles, order tracking, and the ability to
-                            follow your favorite artists, making your art buying
-                            experience truly unique.</p>
-                
-                <h3 id="about_footer">Join us in supporting the arts and bringing
-                    beauty into your life with <span style="color: #00aaae;">A</span>r<span style="color: #00aaae;">t<span style="color: #d15b2e;">H</span>i</span>
-                    v<span style="color: #00aaae;">e</span>!</h3>
-                   <button id="about_getReady" style="color: #d15b2e;">Get Ready</button>
-                </div>
-                
-                <div class="about_photo">
-              
-                    <div >
-                        <img id="about_icon" src="images/about_img/Picture1.png" alt="">
-                </div>
-         
-                <div class="about_iconBackground">
-                </div>
-                    
-                </div>
-                
-                </div>
+    <!--Ardisa's Work-->
+    <!-- ....................................................................................... -->
+    <div class="home-area">
+        <div class="title">
+            <br>
+            <h1>"DISCOVER ART. COLLECT JOY."</h1><br>
+            <h4>WHERE CREATIVITY MEETS ACCESSIBILITY</h4>
+            <br>
         </div>
 
-        <!-- ....................................................................................... -->
 
-        <div class="catalog-area"></div>
+        <!-- <div class="content">
+        </div> --->
+        <div class="video-container">
+            <video id="myVideo" controls autoplay muted loop>
+                <source src="./images/home_img/videoHome.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+
+        <div class="ArtSide">
+            <p id="ArtHive" style="font-family: 'myFont' ">ArtHive</p>
+        </div>
+    </div>
+    <!-- ....................................................................................... -->
 
 
 
+
+    <!-- David Work -->
+    <!-- ....................................................................................... -->
+
+    <div class="about-area">
+        <div class="about_conteiner">
+            <div class="about_text">
+                <h3 id="about_title" style="font-family: 'myFont' ">WELCOME TO ArtHive</h3>
+
+                <p id="about_paragraph1">The ultimate platform for art lovers and
+                    collectors!
+                    Here you can discover a vast collection of breathtaking artwork from emerging and established
+                    artists around the world.
+                    From captivating paintings to stunning sculptures, our diverse range of categories ensures that
+                    there is something for everyone. </p>
+
+                <p id="about_paragraph1">With ArtHive, you can conveniently browse and
+                    purchase
+                    your favorite pieces online, while our secure payment
+                    methods ensure a hassle-free transaction. Our platform also
+                    offers personalized profiles, order tracking, and the ability to
+                    follow your favorite artists, making your art buying
+                    experience truly unique.</p>
+
+                <h3 id="about_footer">Join us in supporting the arts and bringing
+                    beauty into your life with <span style="color: #00aaae;">A</span>r<span
+                        style="color: #00aaae;">t<span style="color: #d15b2e;">H</span>i</span>
+                    v<span style="color: #00aaae;">e</span>!</h3>
+                <button id="about_getReady" style="color: #d15b2e;">Get Ready</button>
+            </div>
+
+            <div class="about_photo">
+
+                <div>
+                    <img id="about_icon" src="images/about_img/Picture1.png" alt="">
+                </div>
+
+                <div class="about_iconBackground">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- ....................................................................................... -->
+
+
+    <!--Era's Work-->
+    <!-- ....................................................................................... -->
+    <div class="catalog-area"></div>
+
+
+    <!-- ....................................................................................... -->
 
 
     <!--Klea's part-->
