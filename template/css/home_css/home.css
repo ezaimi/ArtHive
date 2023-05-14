@@ -128,46 +128,7 @@
   .title h4 {
     color: #595958;
   }
-  
-  /* img slider */
-  /* .content {
-    height: 480px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 7s;
-    animation-name: animate;
-    animation-direction: alternate-reverse;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
-    animation-duration: 12s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    position: relative;
-    top: 30px; 
-  }
-  @keyframes animate {
-    0% {
-      background-image: url(../../images/resize/ArtHive-Canva\ \(1\)\ \(1\).png);
-    }  
-     
-    20% {
-      background-image: url(../../images/resize/ArtHive-Canva\ \(2\)\ \(1\).png);
-    }  
-    40% {
-      background-image: url(../../images/resize/ArtHive-Canva\ \(4\)\ \(1\).png);
-    }  
-    60% {
-      background-image: url(../../images/resize/ArtHive-Canva\ \(5\)\ \(1\).png);
-    }  
-    80% {
-      background-image: url(../../images/resize/ArtHive-Canva\ \(6\)\ \(1\).png);
-    }  
-    100% {
-      background-image: url(../../images/resize/ArtHive-Canva\ \(7\)\ \(1\).png);
-    }  
-  } */
+
   video::-webkit-media-controls {
     display: none !important;
   }
