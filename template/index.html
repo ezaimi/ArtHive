@@ -33,6 +33,10 @@
 
 
     <!--Ardisa Header-->
+     <div class="home-area">
+        
+     </div>
+    
     <header>
         <!--Header Starts-->
         
@@ -43,8 +47,6 @@
               <div class="homeSquare">
                 <a href="#" id="homePage">Home</a>
               </div>
-        
-        
         
               <a href="#" id="aboutPage">About</a>
               <a href="#" id="CatalogPage">Catalog</a>
@@ -63,14 +65,7 @@
 
         <!--Header ends-->
     </header> 
-     <div class="title">
-        <h1>"DISCOVER ART. COLLECT JOY."</h1><br><br>
-        <h4>WHERE CREATIVITY MEETS ACCESSIBILITY</h4>
-      </div>
-
-
-      <div class="content">
-    </div>
+   
 
 
 
@@ -78,7 +73,27 @@
     <main>
 
 
-        <div class="home-area"></div>
+        <div class="home-area">
+            <div class="title">
+                <h1>"DISCOVER ART. COLLECT JOY."</h1><br><br>
+                <h4>WHERE CREATIVITY MEETS ACCESSIBILITY</h4>
+              </div>
+        
+        
+              <!-- <div class="content">
+            </div> -->
+            <div class="video-container">
+                <video id="myVideo" controls autoplay muted loop>
+                  <source src="./images/home_img/Presentation22 (online-video-cutter.com).mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            
+            
+                <div class="ArtSide">
+                  <p id="ArtHive" style="font-family: 'TT Chocolates ExtraBold' ">ArtHive</p>
+                </div>
+        </div>
 
         <div class="about-area"></div>
 
@@ -105,6 +120,10 @@
         window.addEventListener("load", function () {
             loader.style.display = "none";
         })
+        window.onload = function() {
+            var video = document.getElementById('myVideo');
+            video.play(); // Start playing the video
+          };
     </script>
     <!--JS files here-->
 
