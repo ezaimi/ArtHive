@@ -7,7 +7,7 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: var(--primary-color);
+ /* background-color: var(--primary-color);*/
 
 
 }
@@ -155,9 +155,8 @@ video::-webkit-media-controls {
 
 .ArtSide {
   position: relative;
-  z-index: 1001;
   width: 0px;
-  left: 76%;
+  left: 71%;
   top: -115px;
   background-color: none;
   font-size: 130px;
