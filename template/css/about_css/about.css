@@ -1,14 +1,15 @@
 .about_conteiner {
     display: flex;
-    margin-top: 40px;
-
+    margin-top: 80px;
+height: 400px;
+    background-color: #00aaae;
 
 }
 
 
 .about_text {
     margin-top: -20px;
-    margin-left: 80px;
+    margin-left: 580px;
     width: 50%;
 
 }
@@ -35,7 +36,7 @@
 }
 
 .about_photo {
-    margin-left: -20px;
+    margin-left: -85em;
     margin-top: 60px;
 }
 
@@ -49,17 +50,21 @@
     background-color: transparent;
 }
 
-.about_iconBackground {
+/* .about_iconBackground {
     margin-top: -520px;
     background-color: #00aaae;
     height: 320px;
     width: 350px;
     margin-left: 190px;
-}
+} */
 
 #about_getReady {
     height: 42px;
     width: 140px;
     background-color: #ffffff;
     border: 2px solid rgb(37, 36, 36);
+}
+#about_getReady:hover{
+    background-color: #4e1e0b;
+    background-color: #0a6869;
 }
