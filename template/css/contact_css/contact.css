@@ -3,6 +3,7 @@ body {
   padding: 0;
   margin-bottom: -500px;
 }
+
 .footer {
   margin: 0;
   padding: 60px 0 20px;
@@ -13,21 +14,26 @@ body {
   right: 0;
   bottom: -10px;
   width: 100%;
-  overflow: hidden; /* Hide scroll button|*/
-} 
+  overflow: hidden;
+  /* Hide scroll button|*/
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
   background-color: #292929;
 }
+
 .footer p {
   color: #f1f1f1;
-} 
+}
+
 .footer h3 {
- color: #f1f1f1;
+  color: #f1f1f1;
   margin-bottom: 20px;
   font-size: 1.2rem;
 }
+
 .footer-col-1,
 .footer-col-2,
 .footer-col-3,
@@ -36,19 +42,22 @@ body {
   text-align: center;
   background-color: #292929;
 }
+
 .footer-col-1 p,
 .footer-col-2 p {
-  color: #f1f1f1;/*duhet ngjyra #f1f1f1*/
+  color: #f1f1f1;
+  /*duhet ngjyra #f1f1f1*/
   font-size: 14px;
   line-height: 1.5;
   background-color: #292929;
 }
 
-.footer-col-1 .app_logo img{
+.footer-col-1 .app_logo img {
   height: 30px;
   background-color: #292929;
 }
-.footer-col-4 img{
+
+.footer-col-4 img {
   height: 40px;
   background-color: #292929;
 }
@@ -59,13 +68,16 @@ body {
   align-items: center;
   margin-top: 20px;
 }
+
 .app-logo a {
   margin: 0 10px;
 }
+
 .app-logo img {
   width: 60px;
   background-color: #292929;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -78,18 +90,24 @@ ul li {
   color: #f1f1f1;
   background-color: #292929;
 }
- .footer hr{
+
+.footer hr {
   border: none;
-  background-color:rgb(76, 83, 81) ;
+  background-color: rgb(76, 83, 81);
   height: 1px;
   margin: 20px 0;
 
-} 
+}
+
+li {
+  padding-bottom: 10px;
+}
 
 ul li a {
   color: #5d5c5c;
   text-decoration: none;
 }
+
 /* .contatct-area p,
 .contatct-area li,
 .contatct-area h3{
@@ -97,16 +115,18 @@ ul li a {
   background-color: #292929;
 } */
 .footer-col-3 h3,
-.footer-col-4  h3,
+.footer-col-4 h3,
 .footer-col-1 h3,
-.footer-col-2  h3{
-  font-weight:bold;
+.footer-col-2 h3 {
+  font-weight: bold;
   background-color: #292929;
-} 
-.CopyRight{
+}
+
+.CopyRight {
   text-align: center;
   background-color: #292929;
 }
-.footer-col-1 img{
- background-color: #292929;
+
+.footer-col-1 img {
+  background-color: #292929;
 }
