@@ -269,3 +269,47 @@ video::-webkit-media-controls {
   
   transform: rotate(90deg);
 }
+.beforeFooter{
+  width: 100px;
+  position: relative;
+  top: -93px;
+}
+
+
+.blueline{
+  position: relative;
+  width: 200vh;
+  height: 10px;
+  top:1px ;
+  border: 10px solid #00aaae;
+  background-color: #00aaae;
+  z-index: -1;
+}
+.circleDot1{
+  position: relative;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  left: 33vh;
+  top:-43px;
+  background-color: black;
+}
+.circleDot2{
+  position: relative;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  left: 66vh;
+  top:-43px;
+  background-color: black;
+}
+
+.circleDot3{
+  position: relative;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  left: 66vh;
+  top:-43px;
+  background-color: black;
+}
