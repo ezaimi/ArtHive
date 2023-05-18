@@ -1,5 +1,4 @@
 /*Home-Section*/
-/*About-Section*/
 
 :root {
   --primary-color: #f1f1f1;
@@ -8,7 +7,11 @@
 * {
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   background-color: var(--primary-color);
+=======
+ /* background-color: var(--primary-color);*/
+>>>>>>> cd1b8c22467ca81bbf16d71b5faf455414222ace
 
 
 }
@@ -132,12 +135,25 @@
 video::-webkit-media-controls {
   display: none !important;
 }
+<<<<<<< HEAD
 .video-container {
   position: relative;
   width: 100%; /* Set the desired width */
   height: 0;
   padding-bottom: 31.25%; /* Adjust the aspect ratio as needed */
   margin: 0 auto; /* Center the container horizontally */
+=======
+
+.video-container {
+  position: relative;
+  width: 100%;
+  /* Set the desired width */
+  height: 0;
+  padding-bottom: 31.25%;
+  /* Adjust the aspect ratio as needed */
+  margin: 0 auto;
+  /* Center the container horizontally */
+>>>>>>> cd1b8c22467ca81bbf16d71b5faf455414222ace
 }
 
 .video-container video {
@@ -149,6 +165,7 @@ video::-webkit-media-controls {
   /* object-fit: fill;  */
   object-fit: cover;
 }
+<<<<<<< HEAD
 .ArtSide{
   position: relative;
 
@@ -161,3 +178,16 @@ video::-webkit-media-controls {
   
 
  
+=======
+
+.ArtSide {
+  position: relative;
+  width: 0px;
+  left: 71%;
+  top: -115px;
+  background-color: none;
+  font-size: 130px;
+  color: #f1f1f1;
+
+}
+>>>>>>> cd1b8c22467ca81bbf16d71b5faf455414222ace
