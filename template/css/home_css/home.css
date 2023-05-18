@@ -11,7 +11,12 @@
 
 
 }
-
+.navDiv{
+  display: flex;
+  position: relative;
+  top:5px;
+  left: 10px;
+}
 .nav {
   position: fixed;
   top: -7px;
@@ -45,6 +50,8 @@
   padding: 5px;
   padding-right: 30px;
   text-align: right;
+  background-color: var(--primary-color);
+
 }
 
 #searchBar::placeholder {
@@ -56,15 +63,32 @@
   color: #292929;
 }
 
-.homeSquare {
+.navDiv a{
   position: relative;
   display: inline-block;
-  padding: 10px;
+  padding: 6px;
   margin: 10px;
 
 }
+.navDiv a:hover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: rgb(57, 55, 55);
+  width: 80px;
+  /* height: 40px; Set the desired height */
+  padding: 5px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
 
-.homeSquare a {
+
+
+/* .homeHover a:hover {
   border-radius: 20px;
   border: 1px solid black;
   text-decoration: none;
@@ -73,21 +97,65 @@
   width: 80px;
   padding: 5px;
   padding-left: 37px;
+  font-weight: bold;
 
+}
+
+.aboutHover a:hover{
+  border-radius: 20px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: rgb(57, 55, 55);
+  display: block;
+  width: 80px;
+  padding: 5px;
+  padding-left: 37px;
+  font-weight: bold;
+
+}
+.contactHover a:hover{
+  border-radius: 20px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: rgb(57, 55, 55);
+  display: block;
+  width: 80px;
+  padding: 5px;
+  padding-left: 37px;
   font-weight: bold;
 }
-
-.searchButton {
+.sellHover a:hover{
   position: relative;
-  position: relative;
-  top: 0px;
-  left: 400px;
-  background: none;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: rgb(57, 55, 55);
+  display: block;
+  width: 80px;
+  padding: 5px;
+  padding-left: 37px;
+  font-weight: bold;
 }
-
+.buyHover a:hover{
+  border-radius: 20px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: rgb(57, 55, 55);
+  display: block;
+  width: 80px;
+  padding: 5px;
+  padding-left: 37px;
+  font-weight: bold;
+}
+.catalogeHover a:hover{
+  border-radius: 20px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: rgb(57, 55, 55);
+  display: block;
+  width: 80px;
+  padding: 5px;
+} */
 .searchButton i {
   font-size: 15px;
   color: #282727;
@@ -171,9 +239,33 @@ video::-webkit-media-controls {
 .fleciii{
   position: relative;
   display: flex;
+  
 }
 
 .search_menu{
+  position: fixed;
+  left: 850px;
+  top: -5px;
   margin-left: 20em;
-  margin-top: 0.9em;
+  margin-top: 1.2em;
+}
+
+.icon{
+  position: absolute;
+  top:5px;
+  right:110px;
+  size: 20px;
+
+}
+.searchIcon{
+  position: absolute;
+  top:5px;
+  left: 230px;
+}
+.line{
+  position: absolute;
+  top: 3.2px;
+  right: 98px;
+  
+  transform: rotate(90deg);
 }
