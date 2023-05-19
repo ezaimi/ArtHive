@@ -32,4 +32,30 @@ function smoothScroll(targetId) {
       event.preventDefault();
       smoothScroll('catalog_area');
     });
+
+    const contact = document.querySelector('.contactHover a');
+      contact.addEventListener('click', function(event) {
+      event.preventDefault();
+      smoothScroll('contact_area');
+    });
   });
+
+
+ 
+  document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('.navDiv a');
+  
+    links.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        links.forEach(function(link) {
+          link.classList.remove('clicked');
+        });
+        this.classList.add('clicked');
+      });
+    });
+  });
+  
+  
+  
+  
