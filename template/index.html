@@ -39,18 +39,17 @@
   <div id="preloader"></div>
 
   <header>
-    <div class="homePage">
+    
       <div class="nav">
-        <div class="fleciii">
 
 
           <div class="navDiv">
             <div class="homeHover">
               <a href="#" id="homePage">Home</a>
             </div>
-            <div class="aboutHover"><a href="#" id="aboutPage">About</a>
+            <div class="aboutHover"><a href="" id="#">About</a>
             </div>
-            <div class="catalogeHover"><a href="#" id="CatalogPage">Catalog</a>
+            <div class="catalogeHover"><a href="#catalog1" id="CatalogPage">Catalog</a>
             </div>
             <div class="buyHover">
               <a href="#" id="BuyPage">Buy</a>
@@ -77,11 +76,12 @@
               <ion-icon name="search-circle-outline"></ion-icon>
             </span>
           </span>
-        </div>
+
+        
 
 
       </div>
-    </div>
+   
   </header>
 
   <!--Start Slider-->
@@ -114,7 +114,6 @@
 
   <!-- David Work -->
   <!-- ....................................................................................... -->
-
   <div class="about-area">
     <div class="about_conteiner">
       <div class="about_text">
@@ -168,6 +167,7 @@
   <br>
   <br>
 
+  <div id="catalog1"></div>
   <!--Era's Work-->
   <!-- ....................................................................................... -->
   <div class="catalog-area">
@@ -335,7 +335,6 @@
   <br>
 
   <!-- ....................................................................................... -->
-
   <!--Klea's part-->
   <footer>
     <div class="contact-area"></div>
@@ -403,6 +402,21 @@
   <script src="./js/catalog.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   <script>
+    var navbarItems = document.getElementsByClassName("navDiv")[0].getElementsByTagName("a");
+
+for (var i = 0; i < navbarItems.length; i++) {
+  navbarItems[i].addEventListener("mouseover", function () {
+    this.classList.add("navbarHovered");
+  });
+
+  navbarItems[i].addEventListener("mouseout", function () {
+    this.classList.remove("navbarHovered");
+  });
+}
+
+   </script>
+
 </body>
 
 </html>

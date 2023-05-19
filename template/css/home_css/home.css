@@ -36,7 +36,7 @@
   position: relative;
   top: 0px;
   left: 40px;
-  padding: 90px 50px;
+  padding: 90px 90px;
   text-decoration: none;
   color: #292929;
   text-transform: uppercase;
@@ -63,99 +63,28 @@
   color: #292929;
 }
 
-.navDiv a{
-  position: relative;
-  display: inline-block;
-  padding: 6px;
-  margin: 10px;
-
-}
-.navDiv a:hover {
+.navDiv a {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 12px;
+  margin: 8px; 
   border-radius: 20px;
-  border: 1px solid black;
-  text-decoration: none;
-  color: rgb(57, 55, 55);
-  width: 80px;
-  /* height: 40px; Set the desired height */
-  padding: 5px;
-  font-weight: bold;
-  box-sizing: border-box;
+  border: 1px solid transparent; 
+  width: 65px;
 }
 
 
 
-/* .homeHover a:hover {
-  border-radius: 20px;
-  border: 1px solid black;
-  text-decoration: none;
-  color: rgb(57, 55, 55);
-  display: block;
-  width: 80px;
-  padding: 5px;
-  padding-left: 37px;
-  font-weight: bold;
+.navDiv a:hover {
+
+border: 1px solid black;
+border-radius: 25px;
+transition: 0.3s;
 
 }
 
-.aboutHover a:hover{
-  border-radius: 20px;
-  border: 1px solid black;
-  text-decoration: none;
-  color: rgb(57, 55, 55);
-  display: block;
-  width: 80px;
-  padding: 5px;
-  padding-left: 37px;
-  font-weight: bold;
-
-}
-.contactHover a:hover{
-  border-radius: 20px;
-  border: 1px solid black;
-  text-decoration: none;
-  color: rgb(57, 55, 55);
-  display: block;
-  width: 80px;
-  padding: 5px;
-  padding-left: 37px;
-  font-weight: bold;
-}
-.sellHover a:hover{
-  position: relative;
-  border-radius: 20px;
-  border: 1px solid black;
-  text-decoration: none;
-  color: rgb(57, 55, 55);
-  display: block;
-  width: 80px;
-  padding: 5px;
-  padding-left: 37px;
-  font-weight: bold;
-}
-.buyHover a:hover{
-  border-radius: 20px;
-  border: 1px solid black;
-  text-decoration: none;
-  color: rgb(57, 55, 55);
-  display: block;
-  width: 80px;
-  padding: 5px;
-  padding-left: 37px;
-  font-weight: bold;
-}
-.catalogeHover a:hover{
-  border-radius: 20px;
-  border: 1px solid black;
-  text-decoration: none;
-  color: rgb(57, 55, 55);
-  display: block;
-  width: 80px;
-  padding: 5px;
-} */
 .searchButton i {
   font-size: 15px;
   color: #282727;
@@ -245,7 +174,7 @@ video::-webkit-media-controls {
 .search_menu{
   position: fixed;
   left: 850px;
-  top: -5px;
+  top: 3px;
   margin-left: 20em;
   margin-top: 1.2em;
 }
