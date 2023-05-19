@@ -253,7 +253,7 @@ video::-webkit-media-controls {
 .logoImg{
   position: relative;
   object-fit: cover;
-  top: 7px;
+  top: 8px;
   width: 46px;
   height: auto;
   left: 8px;

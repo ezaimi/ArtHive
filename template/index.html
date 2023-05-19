@@ -42,14 +42,13 @@
     
       <div class="nav">
 
-
           <div class="navDiv">
             <div class="homeHover">
-              <a href="#" id="homePage">Home</a>
+              <a href="#home_area" id="homePage">Home</a>
             </div>
-            <div class="aboutHover"><a href="" id="#">About</a>
+            <div class="aboutHover"><a href="#about_area">About</a>
             </div>
-            <div class="catalogeHover"><a href="#catalog1" id="CatalogPage">Catalog</a>
+            <div class="catalogeHover"><a href="#catalog_area">Catalog</a>
             </div>
             <div class="buyHover">
               <a href="#" id="BuyPage">Buy</a>
@@ -88,7 +87,7 @@
 
   <!--Ardisa's Work-->
   <!-- ....................................................................................... -->
-  <div class="home-area">
+  <div class="home-area" id="home_area">
     <div class="title">
 
       <h1>"DISCOVER ART. COLLECT JOY."</h1>
@@ -114,9 +113,16 @@
 
   <!-- David Work -->
   <!-- ....................................................................................... -->
+  
+  <div id="about_area"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="about-area">
     <div class="about_conteiner">
-      <div class="about_text">
+      <div class="about_text" >
         <h3 id="about_title" style="font-family: 'myFont'">
           WELCOME TO ArtHive
         </h3>
@@ -167,10 +173,9 @@
   <br>
   <br>
 
-  <div id="catalog1"></div>
   <!--Era's Work-->
   <!-- ....................................................................................... -->
-  <div class="catalog-area">
+  <div class="catalog-area" id="catalog_area">
     <div class="catalog-slider">
       <div class="catalog-slide-track">
         <div class="catalog-slide">
@@ -392,6 +397,7 @@
   <div id="back-top"></div>
 
   <!--Preloader script-->
+  <script src="./js/homeJs.js"></script>
   <script>
     var loader = document.getElementById("preloader");
     window.addEventListener("load", function () {
