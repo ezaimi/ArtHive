@@ -8,11 +8,10 @@ body {
   margin: 0;
   padding: 60px 0 20px;
   background-color: #292929;
-  height: 240px;
+  height: 100%;
   position: relative;
   left: 0;
   right: 0;
-  bottom: -10px;
   width: 100%;
   overflow: hidden;
   /* Hide scroll button|*/
@@ -129,4 +128,25 @@ ul li a {
 
 .footer-col-1 img {
   background-color: #292929;
+}
+
+/*------------------------------------------------------------------------------------*/
+.custom-shape-divider-bottom-1684688853 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1684688853 svg {
+  position: relative;
+  display: block;
+  width: calc(168% + 1.3px);
+  height: 700px;
+}
+
+.custom-shape-divider-bottom-1684688853 .shape-fill {
+  fill: #83a6db9a;
 }

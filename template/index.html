@@ -39,48 +39,48 @@
   <div id="preloader"></div>
 
   <header>
-    
-      <div class="nav">
 
-          <div class="navDiv">
-            <div class="homeHover">
-              <a href="#home_area">Home</a>
-            </div>
-            <div class="aboutHover"><a href="#about_area">About</a>
-            </div>
-            <div class="catalogeHover"><a href="#catalog_area">Catalog</a>
-            </div>
-            <div class="buyHover">
-              <a href="#" id="BuyPage">Buy</a>
+    <div class="nav">
 
-            </div>
-            <div class="sellHover">
-              <a href="#" id="SellPage">Sell</a>
-            </div>
-            <div class="contactHover">
-              <a href="#contact_area">Contact</a>
-            </div>
-            <button type="submit" class="searchButton">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
+      <div class="navDiv">
+        <div class="homeHover">
+          <a href="#home_area">Home</a>
+        </div>
+        <div class="aboutHover"><a href="#about_area">About</a>
+        </div>
+        <div class="catalogeHover"><a href="#catalog_area">Catalog</a>
+        </div>
+        <div class="buyHover">
+          <a href="#" id="BuyPage">Buy</a>
 
-          <span class="search_menu">
-            <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar" />
-            <span class="icon"><ion-icon name="ellipsis-horizontal"></ion-icon></span>
-            <span class="line">
-              <ion-icon name="remove-outline"></ion-icon>
-            </span>
-            <span class="searchIcon">
-              <ion-icon name="search-circle-outline"></ion-icon>
-            </span>
-          </span>
-
-        
-
-
+        </div>
+        <div class="sellHover">
+          <a href="#" id="SellPage">Sell</a>
+        </div>
+        <div class="contactHover">
+          <a href="#contact_area">Contact</a>
+        </div>
+        <button type="submit" class="searchButton">
+          <i class="fas fa-search"></i>
+        </button>
       </div>
-   
+
+      <span class="search_menu">
+        <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar" />
+        <span class="icon"><ion-icon name="ellipsis-horizontal"></ion-icon></span>
+        <span class="line">
+          <ion-icon name="remove-outline"></ion-icon>
+        </span>
+        <span class="searchIcon">
+          <ion-icon name="search-circle-outline"></ion-icon>
+        </span>
+      </span>
+
+
+
+
+    </div>
+
   </header>
 
   <!--Start Slider-->
@@ -95,7 +95,7 @@
       <h4>WHERE CREATIVITY MEETS ACCESSIBILITY</h4>
       <br />
     </div>
-<br>
+    <br>
 
 
     <!-- <div class="content">
@@ -115,7 +115,7 @@
 
   <!-- David Work -->
   <!-- ....................................................................................... -->
-  
+
   <div id="about_area"></div>
   <br>
   <br>
@@ -124,7 +124,7 @@
   <br>
   <div class="about-area">
     <div class="about_conteiner">
-      <div class="about_text" >
+      <div class="about_text">
         <h3 id="about_title" style="font-family: 'myFont'">
           WELCOME TO ArtHive
         </h3>
@@ -299,6 +299,10 @@
 
   <div class="beforeFooter">
 
+
+
+
+
     <hr class="blueline">
     <div class="allCircles">
       <div class="circleDot1"><img class="logoImg"
@@ -329,22 +333,29 @@
         artwork from emerging and established artists around the world. </p>
     </div>
 
+
+
+
   </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+  <!--Wave Shape-->
+
+  <div class="custom-shape-divider-bottom-1684688853">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path
+        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+        class="shape-fill"></path>
+    </svg>
+  </div>
+
+
+
+
 
   <!-- ....................................................................................... -->
   <!--Klea's part-->
   <footer>
-    <div class="contact-area" ></div>
+    <div class="contact-area"></div>
     <div class="footer">
       <div class="container">
         <div class="row"></div>
@@ -410,20 +421,20 @@
   <script src="./js/catalog.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-   <script>
+  <script>
     var navbarItems = document.getElementsByClassName("navDiv")[0].getElementsByTagName("a");
 
-for (var i = 0; i < navbarItems.length; i++) {
-  navbarItems[i].addEventListener("mouseover", function () {
-    this.classList.add("navbarHovered");
-  });
+    for (var i = 0; i < navbarItems.length; i++) {
+      navbarItems[i].addEventListener("mouseover", function () {
+        this.classList.add("navbarHovered");
+      });
 
-  navbarItems[i].addEventListener("mouseout", function () {
-    this.classList.remove("navbarHovered");
-  });
-}
+      navbarItems[i].addEventListener("mouseout", function () {
+        this.classList.remove("navbarHovered");
+      });
+    }
 
-   </script>
+  </script>
 
 </body>
 
