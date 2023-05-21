@@ -7,16 +7,18 @@
 * {
   margin: 0;
   padding: 0;
- /* background-color: var(--primary-color);*/
+  /* background-color: var(--primary-color);*/
 
 
 }
-.navDiv{
+
+.navDiv {
   display: flex;
   position: relative;
-  top:5px;
+  top: 5px;
   left: 10px;
 }
+
 .nav {
   position: fixed;
   top: -7px;
@@ -70,14 +72,14 @@
   justify-content: center;
   align-items: center;
   padding: 12px;
-  margin: 8px; 
+  margin: 8px;
   border-radius: 20px;
-  border: 1px solid transparent; 
+  border: 1px solid transparent;
   width: 65px;
 }
 
 
-.navDiv a:hover{
+.navDiv a:hover {
   border: 1px solid black;
   border-radius: 25px;
   transition: 0.3s;
@@ -165,18 +167,19 @@ video::-webkit-media-controls {
   color: #f1f1f1;
 
 }
-.InputDiv{
- display: flex;
- position: relative;
+
+.InputDiv {
+  display: flex;
+  position: relative;
 }
 
-.fleciii{
+.fleciii {
   position: relative;
   display: flex;
-  
+
 }
 
-.search_menu{
+.search_menu {
   position: fixed;
   left: 850px;
   top: 3px;
@@ -184,23 +187,25 @@ video::-webkit-media-controls {
   margin-top: 1.2em;
 }
 
-.icon{
+.icon {
   position: absolute;
-  top:5px;
-  right:110px;
+  top: 5px;
+  right: 110px;
   size: 20px;
 
 }
-.searchIcon{
+
+.searchIcon {
   position: absolute;
-  top:5px;
+  top: 5px;
   left: 230px;
 }
-.line{
+
+.line {
   position: absolute;
   top: 3.2px;
   right: 98px;
-  
+
   transform: rotate(90deg);
 }
 
@@ -212,6 +217,9 @@ video::-webkit-media-controls {
   justify-content: center;
   align-items: center;
 }
+
+
+/*---------------------------------------*/
 
 .blueline {
   position: absolute;
@@ -230,13 +238,13 @@ video::-webkit-media-controls {
 .circleDot1,
 .circleDot2,
 .circleDot3 {
- position: relative;
- top: -13px;
+  position: relative;
+  top: -13px;
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background-color:#292929;
-   /* Adjust the spacing between the circles */
+  background-color: #292929;
+  /* Adjust the spacing between the circles */
 
 }
 
@@ -251,11 +259,12 @@ video::-webkit-media-controls {
 .circleDot3 {
   margin-left: 170px;
 }
+
 .searchIcon ion-icon {
   z-index: 999;
 }
 
-.logoImg{
+.logoImg {
   position: relative;
   object-fit: cover;
   top: 8px;
@@ -264,7 +273,7 @@ video::-webkit-media-controls {
   left: 8px;
 }
 
-.UnderCircles{
+.UnderCircles {
   /* width: 30%; */
   position: relative;
   top: -93px;
@@ -273,25 +282,30 @@ video::-webkit-media-controls {
   align-items: center;
 }
 
-.p1, .p2, .p3 {
+.p1,
+.p2,
+.p3 {
   width: 20%;
-    overflow-wrap: break-word;
-    top:30px;
-    font-family: 'Poppins';font-size: 22px;
-  font-size: 18px;}
+  overflow-wrap: break-word;
+  top: 30px;
+  font-family: 'Poppins';
+  font-size: 22px;
+  font-size: 18px;
+}
 
-.p1{
+.p1 {
   position: relative;
 
   right: 70px;
 
 }
-.p2{
+
+.p2 {
   position: relative;
   right: -27px;
 }
 
-.p3{
+.p3 {
   position: relative;
 
   right: -110px;
