@@ -1,0 +1,3 @@
+.wholePage#blur.active {
+    filter: blur(15px);
+}
