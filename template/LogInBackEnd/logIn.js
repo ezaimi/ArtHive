@@ -9,7 +9,13 @@ validation
     {
       rule: "required",
       errorMessage: "Please enter a name",
-      style: "color: blue;" ,
+      getMessage: () => {
+        return {
+          message: "Please enter a name",
+          class: "just-validate-error",
+        };
+      }
+      ,
       getMessage: () => {
         return {
           message: "Please enter a name",
