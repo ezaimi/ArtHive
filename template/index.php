@@ -34,6 +34,18 @@
   <link rel="stylesheet" href="./css/login_register_css/login.css" />
   <link rel="stylesheet" href="./css/login_register_css/loginArtist.css" />
 
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  <script src="./LogInBackEnd/logIn.js" defer> </script>
+
+  <style>
+    .z{
+      width: 100%;
+    }
+    .just-validate-error-label{
+      margin-left: -230px;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -89,47 +101,39 @@
 
   <!------------------------------------------------------------------------------------------------------->
 
-  <!--Login/Register FORM for CUSTOMER-->
   <div class="popup" id="popup">
-    <div class="form-container register-container">
-      <form action="#">
-        <h1 id="popup-h1" style="color: #292929;">Discover and Explore Art.</h1>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button>Register</button>
+  <div class="form-container register-container" method="post">
+    <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp">
+      <h1 id="popup-h1" style="color: #292929;">Discover and Explore Art.</h1>
+   <div class="z">
+   <input type="text" placeholder="name" name="name" id="name">
+   </div >
+   <div class="z">   <input type="email" placeholder="email" name="email" id="email"></div>
+   
+<div class="z">      <input type="password" placeholder="password" name="password" id="password"></div>
+      <button>Register</button>
+    </form>
+  </div>
 
-        <!-- <div class="social-container">
-          <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
-          <a href="#" class="social"><i class="lni lni-google"></i></a>
-          <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
-        </div> -->
-      </form>
-    </div>
 
-    <div class="form-container login-container">
-      <form action="#">
-        <h1 id="popup-h1" style="color: #292929;">Log in to collect Art.</h1>
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <div class="content">
-          <div class="checkbox">
-            <!-- <input type="checkbox" name="checkbox" id="checkbox"> -->
-            <!-- <label>Remember me</label> -->
-          </div>
-          <div class="pass-link">
-            <!-- <a href="#">Forgot password?</a> -->
-          </div>
+
+  <div class="form-container login-container">
+    <form action="./LogInBackEnd/logIn_process.php" method="post">
+      <h1 id="popup-h1" style="color: #292929;">Log in to collect Art.</h1>
+      <input type="email" placeholder="Email" name="email">
+      <input type="password" placeholder="Password" name="password">
+      <div class="content">
+        <div class="checkbox">
+          <!-- <input type="checkbox" name="checkbox" id="checkbox"> -->
+          <!-- <label>Remember me</label> -->
         </div>
-        <button>Log in</button>
-
-        <!-- <div class="social-container">
-          <a href="#" class="social"><i class="lni lni-facebook-fill"></i></a>
-          <a href="#" class="social"><i class="lni lni-google"></i></a>
-          <a href="#" class="social"><i class="lni lni-linkedin-original"></i></a>
-        </div> -->
-      </form>
-    </div>
+        <div class="pass-link">
+          <!-- <a href="#">Forgot password?</a> -->
+        </div>
+      </div>
+      <button>Log in</button>
+    </form>
+  </div>
 
     <div class="overlay-container">
       <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
