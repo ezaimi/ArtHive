@@ -81,7 +81,14 @@
   transition: 0.3s;
 } */
 
-
+#logo {
+  position: relative;
+  width: 100x;
+  object-fit: cover`````;
+  width: 123px;
+  height: 33px;
+  left:301px;
+}
 .navDiv a:hover{
   border: 1px solid black;
   border-radius: 25px;
