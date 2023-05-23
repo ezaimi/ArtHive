@@ -1,31 +1,55 @@
 const validation = new JustValidate("#signUp");
 
+var nameError = document.getElementById('name-error');
+  var emailError = document.getElementById('email-error');
+  var passwordError = document.getElementById('password-error');
+
 validation
-     .addField("#name", [{
-        rule: "required",
-     }])
-
-     .addField("#email", [
-      {
-         rule: "required",
-         errorMessage: "Please enter a gmail"
-      },
-      {
-         rule: "email",
-         errorMessage: "Please Enter a valid gmail"
+  .addField("#name", [
+    {
+      rule: "required",
+      errorMessage: "Please enter a name",
+      style: "color: blue;" ,
+      getMessage: () => {
+        return {
+          message: "Please enter a name",
+          class: "just-validate-error"
+        };
       }
-   ])
-      .addField("#password", [
-         {
-         rule: "required",
-         errorMessage: "Please enter a password"
-      },
-      {
-         rule: "password",
-      }
+    }
+  ])
 
-   ])
+  .addField("#email", [
+    {
+      rule: "required",
+      errorMessage: "&nbsp;&nbsp;Please enter an email",
+    },
+    {
+      rule: "email",
+      errorMessage: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please enter a valid email",
+    }
+  ])
 
-   .onSuccess((event)=>{
-document.getElementById("signUp").submit();
-   })
+  .addField("#password", [
+    {
+      rule: "required",
+      errorMessage: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please enter a password",
+    },
+    {
+      rule: "password",
+      errorMessage: "Not valid Password",
+      style: "color: blue" ,
+         getMessage: () => {
+            return {
+              message: "Numbers and special characters are required",
+              class: "just-validate-error",
+              style: "color: blue;" // Set the color to red
+            };
+    }
+   }
+  ])
+
+  .onSuccess((event) => {
+    document.getElementById("signUp").submit();
+  });
+

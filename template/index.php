@@ -44,6 +44,10 @@
     .just-validate-error-label{
       margin-left: -230px;
     }
+
+.just-validate-error-label {
+  color: #4bb6b7 !important;
+}
   </style>
 
 </head>
@@ -100,17 +104,19 @@
   </header>
 
   <!------------------------------------------------------------------------------------------------------->
-
   <div class="popup" id="popup">
   <div class="form-container register-container" method="post">
     <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp">
       <h1 id="popup-h1" style="color: #292929;">Discover and Explore Art.</h1>
-   <div class="z">
-   <input type="text" placeholder="name" name="name" id="name">
-   </div >
-   <div class="z">   <input type="email" placeholder="email" name="email" id="email"></div>
-   
-<div class="z">      <input type="password" placeholder="password" name="password" id="password"></div>
+      <div class="z">
+        <input type="text" placeholder="Name" name="name" id="name">
+      </div>
+      <div class="z">
+        <input type="email" placeholder="Email" name="email" id="email">
+      </div>
+      <div class="z">
+        <input type="password" placeholder="Password" name="password" id="password">
+      </div>
       <button>Register</button>
     </form>
   </div>
