@@ -75,6 +75,11 @@
   border: 1px solid transparent; 
   width: 65px;
 }
+/* .navDiv a#homeLink {
+  border: 1px solid black;
+  border-radius: 25px;
+  transition: 0.3s;
+} */
 
 
 .navDiv a:hover{

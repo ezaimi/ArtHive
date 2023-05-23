@@ -43,8 +43,10 @@
       <div class="nav">
 
           <div class="navDiv">
-            <div class="homeHover">
-              <a href="#home_area">Home</a>
+
+            <div class="homeHover" >   <a href="#home_area" id="homeLink" onclick="applyStyles(event)">Home</a>
+
+
             </div>
             <div class="aboutHover"><a href="#about_area">About</a>
             </div>
@@ -66,14 +68,15 @@
           </div>
 
           <span class="search_menu">
-            <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar" />
+            <!-- <p>adfa</p> -->
+            <!-- <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar" />
             <span class="icon"><ion-icon name="ellipsis-horizontal"></ion-icon></span>
             <span class="line">
               <ion-icon name="remove-outline"></ion-icon>
             </span>
             <span class="searchIcon">
               <ion-icon name="search-circle-outline"></ion-icon>
-            </span>
+            </span> -->
           </span>
 
         
@@ -425,6 +428,55 @@ for (var i = 0; i < navbarItems.length; i++) {
 
    </script>
 
+   <!-- ------------------ -->
+
+   
+  
+
+<script>
+  function applyStyles(event) {
+    const homeLink = document.getElementById('homeLink');
+    homeLink.style.border = '';
+    homeLink.style.borderRadius = '';
+    homeLink.style.transition = '';
+    homeLink.removeEventListener('click', applyStyles);
+  }
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('.navDiv a');
+    var homeLink = document.getElementById('homeLink');
+
+    links.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        links.forEach(function(link) {
+          link.classList.remove('clicked');
+        });
+        this.classList.add('clicked');
+        homeLink.classList.remove('clicked');
+      });
+    });
+
+    // Apply the initial CSS styles to the home link
+    homeLink.style.border = '1px solid black';
+    homeLink.style.borderRadius = '25px';
+    homeLink.style.transition = '0.3s';
+
+    // Remove CSS styles from home link when any other link is clicked
+    links.forEach(function(link) {
+      if (link !== homeLink) {
+        link.addEventListener('click', function() {
+          homeLink.style.border = '';
+          homeLink.style.borderRadius = '';
+          homeLink.style.transition = '';
+        });
+      }
+    });
+  });
+</script>
 </body>
+
+
 
 </html>
