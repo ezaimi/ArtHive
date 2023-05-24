@@ -1,3 +1,5 @@
+//Customer
+
 const registerButton = document.getElementById("register");
 const loginButton = document.getElementById("login");
 
@@ -10,3 +12,5 @@ registerButton.addEventListener("click", () => {
 loginButton.addEventListener("click", () => {
     popup.classList.remove("right-panel-active");
 });
+
+

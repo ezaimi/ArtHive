@@ -50,6 +50,6 @@ try {
 }
 
 
-// kur ska errore
+// kur s'ka errore
 echo"OKOKOK";
 ?>

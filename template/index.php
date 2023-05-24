@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+ 
   <title>ArtHive</title>
   <!--font-->
   <style type="text/css">
@@ -72,7 +72,6 @@
         </div>
         <div class="buyHover">
           <a href="#" id="BuyPage" onclick="toggle()">Buy</a>
-
         </div>
         <div class="sellHover">
           <a href="#" id="SellPage" onclick="toggle2()">Sell</a>
@@ -102,12 +101,15 @@
     </div>
 
   </header>
-
+  
   <!------------------------------------------------------------------------------------------------------->
+
+  <!--CUSTOMERS login/register gui-->
+
   <div class="popup" id="popup">
-  <div class="form-container register-container" method="post">
-    <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp">
-      <h1 id="popup-h1" style="color: #292929;">Discover and Explore Art.</h1>
+    <div class="form-container register-container" method="post">
+      <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp">
+        <h1 id="popup-h1" style="color: #292929;">Discover and Explore Art.</h1>
       <div class="z">
         <input type="text" placeholder="Name" name="name" id="name">
       </div>
@@ -119,7 +121,7 @@
       </div>
       <button>Register</button>
     </form>
-  </div>
+    </div>
 
 
 
@@ -155,6 +157,67 @@
           <h1 class="title">Start your journey now</h1>
           <p>No account yet? Join ArtHive Community as an Art Lover.</p>
           <button class="ghost" id="register">Register
+            <i class="lni lni-arrow-right register"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--ARTISTS login/register gui-->
+
+  <div class="popup2" id="popup2">
+  <div class="form-container register-container" method="post">
+    <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp2">
+      <h1 id="popup2-h1" style="color: #292929;">Discover and Explore Art.</h1>
+      <div class="z">
+        <input type="text" placeholder="Name" name="name" id="name2">
+      </div>
+      <div class="z">
+        <input type="email" placeholder="Email" name="email" id="email2">
+      </div>
+      <div class="z">
+        <input type="password" placeholder="Password" name="password" id="password2">
+      </div>
+      <button>Register</button>
+    </form>
+  </div>
+
+
+
+  <div class="form-container login-container">
+    <form action="./LogInBackEnd/logIn_process.php" method="post">
+      <h1 id="popup-h1" style="color: #292929;">Log in to collect Art.</h1>
+      <input type="email" placeholder="Email" name="email">
+      <input type="password" placeholder="Password" name="password">
+      <div class="content">
+        <div class="checkbox">
+          <!-- <input type="checkbox" name="checkbox" id="checkbox"> -->
+          <!-- <label>Remember me</label> -->
+        </div>
+        <div class="pass-link">
+          <!-- <a href="#">Forgot password?</a> -->
+        </div>
+      </div>
+      <button>Log in</button>
+    </form>
+  </div>
+
+    <div class="overlay-container">
+      <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1 class="title">Already have an Account?</h1>
+          <p>Log in and immerse yourself in the art world!</p>
+          <button class="ghost" id="login2">Login
+            <i class="lni lni-arrow-left login"></i>
+          </button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1 class="title">Start your journey now</h1>
+          <p>No account yet? Join ArtHive Community as an Art Lover.</p>
+          <button class="ghost" id="register2">Register
             <i class="lni lni-arrow-right register"></i>
           </button>
         </div>
@@ -497,6 +560,7 @@
   <script src="./js/catalog.js"></script>
   <script src="./js/blurred.js"></script>
   <script src="./js/loginUI.js"></script>
+  <script src="./js/loginUIartist.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 

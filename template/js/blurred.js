@@ -1,4 +1,5 @@
 function toggle() {
+    console.log("ok");
     var blur = document.getElementById('blur');
     blur.classList.toggle('active');
 
@@ -8,10 +9,11 @@ function toggle() {
 }
 
 function toggle2() {
+    console.log("hello");
     var blur = document.getElementById('blur');
-    blur.classList.toggle('active');
+    blur.classList.toggle2('active');
 
     /*popup-i*/
-    var popup = document.getElementById('popup2');
-    popup.classList.toggle('active');
+    var popup2 = document.getElementById('popup2');
+    popup2.classList.toggle2('active');
 }
