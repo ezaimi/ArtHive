@@ -25,7 +25,7 @@ if(!$mySQL)
     die("Failed to connect to the database");
 }
 
-$sql="INSERT INTO user_data(name,email,password) VALUES (?,?,?)";
+$sql="INSERT INTO user_data(name,email,password) VALUES (? ,?,?)";
 
 $stmt = $mySQL->stmt_init();
 
