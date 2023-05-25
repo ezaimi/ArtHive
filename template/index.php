@@ -33,8 +33,7 @@
   <link rel="stylesheet" href="preloader.css" />
   <link rel="stylesheet" href="./css/login_register_css/login.css" />
   <link rel="stylesheet" href="./css/login_register_css/loginArtist.css" />
-
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <script src="./LogInBackEnd/logIn.js" defer> </script>
 
   <style>
