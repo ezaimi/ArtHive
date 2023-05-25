@@ -1,4 +1,4 @@
-.wholePage#blur.active {
+.wholePage#blur.active2 {
     filter: blur(15px);
 }
 
@@ -18,7 +18,7 @@
     z-index: 9999;
 }
 
-#popup2.active {
+#popup2.active2 {
     top: 53%;
     visibility: visible;
     opacity: 1;
@@ -68,29 +68,29 @@ div.popup2 h1.title {
 
 }
 
-div.popup2 .overlay-panel.overlay-left h1.title {
+.popup2.overlay-panel.overlay-left h1.title {
     margin-right: 3rem;
 
 }
 
-div.popup2 .overlay-panel.overlay-left p {
+.popup2.overlay-panel.overlay-left p {
     margin-right: 3rem;
 }
 
-div.popup2 .overlay-panel.overlay-left button {
+.popup2.overlay-panel.overlay-left button {
     margin-right: 5rem;
 }
 
-div.popup2 .overlay-panel.overlay-right h1.title {
+.popup2.overlay-panel.overlay-right h1.title {
     margin-left: 5rem;
 
 }
 
-div.popup2 .overlay-panel.overlay-right p {
+.popup2.overlay-panel.overlay-right p {
     margin-left: 5rem;
 }
 
-div.popup2 .overlay-panel.overlay-right button {
+.popup2.overlay-panel.overlay-right button {
     margin-left: 5rem;
 }
 
@@ -130,19 +130,19 @@ div.popup2 content {
     justify-content: space-around;
 }
 
-div.popup2 .content.checkbox {
+.popup2.content.checkbox {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-div.popup2 .content input {
+.popup2.content input {
     accent-color: #292929;
     width: 12px;
     height: 12px;
 }
 
-div.popup2 .content label {
+.popup2.content label {
     font-size: 14px;
     user-select: none;
     padding-left: 5px;
@@ -162,6 +162,7 @@ div.popup2 button {
     text-transform: capitalize;
     transition: 0.3s ease-in-out;
 }
+
 
 div.popup2 button:hover {
     letter-spacing: 3px;
@@ -299,7 +300,7 @@ div.popup2.overlay-container {
     transform: translate(-100%);
 }
 
-div.popup2.overlay {
+.overlay2 {
     background-image: url("image2.gif");
     background-repeat: no-repeat;
     background-size: cover;
@@ -317,7 +318,7 @@ div.popup2.overlay {
 
 
 
-div.popup2.overlay::before {
+div.popup2.overlay2::before {
     content: "";
     position: absolute;
     left: 0;
@@ -329,7 +330,7 @@ div.popup2.overlay::before {
             rgba(46, 94, 109, 0));
 }
 
-.popup2.right-panel-active .overlay {
+.popup2.right-panel-active .overlay2 {
     transform: translateX(50%);
 }
 

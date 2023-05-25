@@ -47,6 +47,7 @@
 
 .just-validate-error-label {
   color: #4bb6b7 !important;
+  font-family: myFontThin;
 }
   </style>
 
@@ -71,10 +72,10 @@
         <div class="catalogeHover"><a href="#catalog_area">Catalog</a>
         </div>
         <div class="buyHover">
-          <a href="#" id="BuyPage" onclick="toggle()">Buy</a>
+          <a href="#" id="BuyPage" onclick="toggleBuy()">Buy</a>
         </div>
         <div class="sellHover">
-          <a href="#" id="SellPage" onclick="toggle2()">Sell</a>
+          <a href="#" id="SellPage" onclick="toggleSell()">Sell</a>
         </div>
         <div class="contactHover">
           <a href="#contact_area">Contact</a>
@@ -188,7 +189,7 @@
 
   <div class="form-container login-container">
     <form action="./LogInBackEnd/logIn_process.php" method="post">
-      <h1 id="popup-h1" style="color: #292929;">Log in to collect Art.</h1>
+      <h1 id="popup-h1" style="color: #292929;">Log in to SELL Art.</h1>
       <input type="email" placeholder="Email" name="email">
       <input type="password" placeholder="Password" name="password">
       <div class="content">
@@ -206,7 +207,7 @@
 
     <div class="overlay-container">
       <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
-      <div class="overlay">
+      <div class="overlay2">
         <div class="overlay-panel overlay-left">
           <h1 class="title">Already have an Account?</h1>
           <p>Log in and immerse yourself in the art world!</p>

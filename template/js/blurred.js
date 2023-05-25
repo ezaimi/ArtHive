@@ -1,4 +1,4 @@
-function toggle() {
+function toggleBuy() {
     console.log("ok");
     var blur = document.getElementById('blur');
     blur.classList.toggle('active');
@@ -8,12 +8,12 @@ function toggle() {
     popup.classList.toggle('active');
 }
 
-function toggle2() {
+function toggleSell() {
     console.log("hello");
     var blur = document.getElementById('blur');
-    blur.classList.toggle2('active');
+    blur.classList.toggle('active2');
 
     /*popup-i*/
     var popup2 = document.getElementById('popup2');
-    popup2.classList.toggle2('active');
+    popup2.classList.toggle('active2');
 }
