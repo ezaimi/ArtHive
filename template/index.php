@@ -154,7 +154,7 @@
           </button>
         </div>
         <div class="overlay-panel overlay-right">
-          <h1 class="title">Start your journey now</h1>
+          <h1 class="title">Start your journey!</h1>
           <p>No account yet? Join ArtHive Community as an Art Lover.</p>
           <button class="ghost" id="register">Register
             <i class="lni lni-arrow-right register"></i>
@@ -170,13 +170,14 @@
   <div class="popup2" id="popup2">
   <div class="form-container register-container" method="post">
     <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp2">
-      <h1 id="popup2-h1" style="color: #292929;">Discover and Explore Art.</h1>
+      <h1 id="popup2-h1" style="color: #292929;">Join as an Artist</h1>
       <div class="z">
         <input type="text" placeholder="Name" name="name" id="name2">
       </div>
       <div class="z">
         <input type="email" placeholder="Email" name="email" id="email2">
       </div>
+        <label class="rules">&nbsp;&nbsp;Please use at least 8 characters.</label>
       <div class="z">
         <input type="password" placeholder="Password" name="password" id="password2">
       </div>
@@ -188,7 +189,7 @@
 
   <div class="form-container login-container">
     <form action="./LogInBackEnd/logIn_process.php" method="post">
-      <h1 id="popup-h1" style="color: #292929;">Log in to SELL Art.</h1>
+      <h1 id="popup-h1" style="color: #292929;">Log in to show your Art!</h1>
       <input type="email" placeholder="Email" name="email">
       <input type="password" placeholder="Password" name="password">
       <div class="content">
@@ -215,8 +216,8 @@
           </button>
         </div>
         <div class="overlay-panel overlay-right">
-          <h1 class="title">Start your journey now</h1>
-          <p>No account yet? Join ArtHive Community as an Art Lover.</p>
+          <h1 class="title">Start your journey!</h1>
+          <p>No account yet? Unleash Your Artistic Potential!</p>
           <button class="ghost" id="register2">Register
             <i class="lni lni-arrow-right register"></i>
           </button>

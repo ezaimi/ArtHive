@@ -1,5 +1,5 @@
 .wholePage#blur.active {
-    filter: blur(15px);
+    filter: blur(5px);
 }
 
 
@@ -325,7 +325,7 @@ div.popup input {
     top: 0;
     bottom: 0;
     background: linear-gradient(to top,
-            rgba(46, 94, 109, 0.4) 40%,
+            rgba(54, 124, 115, 0.349) 5%,
             rgba(46, 94, 109, 0));
 }
 
