@@ -1,10 +1,5 @@
 <?php
 
-if(empty($_POST["name"]))
-{
-    die("Please enter a name") ;
-}
-
 if(empty($_POST["email"]))
 {
     echo "Please enter an Email";

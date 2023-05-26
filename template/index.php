@@ -34,8 +34,13 @@
   <link rel="stylesheet" href="./css/login_register_css/login.css" />
   <link rel="stylesheet" href="./css/login_register_css/loginArtist.css" />
 
+
+  
   <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
-  <script src="./LogInBackEnd/logIn.js" defer> </script>
+  <script src="./LogInBackEnd/logInn.js" defer> </script>
+  <script src="./LogInBackEnd/sighUpp.js" defer> </script>
+  <script src="./LogInBackEnd/logIn-Validation.js" defer> </script>
+
 
   <style>
     .z{
@@ -112,13 +117,13 @@
       <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp">
         <h1 id="popup-h1" style="color: #292929;">Discover and Explore Art.</h1>
       <div class="z">
-        <input type="text" placeholder="Name" name="name" id="name">
+        <input type="text" placeholder="Name" name="name" id="name" autocomplete="on">
       </div>
       <div class="z">
-        <input type="email" placeholder="Email" name="email" id="email">
+        <input type="email" placeholder="Email" name="email" id="email" autocomplete="on">
       </div>
       <div class="z">
-        <input type="password" placeholder="Password" name="password" id="password">
+        <input type="password" placeholder="Password" name="password" id="password" autocomplete="on">
       </div>
       <button>Register</button>
     </form>
@@ -127,17 +132,19 @@
 
 
   <div class="form-container login-container">
-    <form action="./LogInBackEnd/logIn_process.php" method="post">
+    <form action="./LogInBackEnd/logIn_process.php" method="post" id="LogInn">
       <h1 id="popup-h1" style="color: #292929;">Log in to collect Art.</h1>
-      <input type="email" placeholder="Email" name="email">
-      <input type="password" placeholder="Password" name="password">
+      <div style="width: 100%;">
+      <input type="email" placeholder="Email" name="email" id="email_log">
+      </div>
+<div style="width: 100%;">
+<input type="password" placeholder="Password" name="password" id="password_log">
+</div>
+   
       <div class="content">
         <div class="checkbox">
-          <!-- <input type="checkbox" name="checkbox" id="checkbox"> -->
-          <!-- <label>Remember me</label> -->
         </div>
         <div class="pass-link">
-          <!-- <a href="#">Forgot password?</a> -->
         </div>
       </div>
       <button>Log in</button>
@@ -145,7 +152,6 @@
   </div>
 
     <div class="overlay-container">
-      <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
       <div class="overlay">
         <div class="overlay-panel overlay-left">
           <h1 class="title">Already have an Account?</h1>

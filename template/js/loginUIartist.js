@@ -12,3 +12,4 @@ registerButton2.addEventListener("click", () => {
 loginButton2.addEventListener("click", () => {
     popup2.classList.remove("right-panel-active");
 });
+
