@@ -1,7 +1,9 @@
-console.log("Dav");
+console.log("Davvvvv");
+
+console.log("Davvvsffvv");
 const validation1 = new JustValidate("#signUp-logIn");
-
-
+ var kot = null;
+const lot = true
 
 validation1
     .addField("#log_email", [
@@ -15,6 +17,7 @@ validation1
         },
         {
             validator: (value) => {
+                kot = value;
                 return () => {
                     return fetch("./LogInBackEnd/email-loginvalidation.php?email=" + encodeURIComponent(value))
                         .then(function(response) {
@@ -40,20 +43,28 @@ validation1
             errorMessage: "Not valid Password",
         },
         {
-            validator: (email, password) => {
-                return () => {
-                    const url = "./LogInBackEnd/login-validation.php?email=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password);
-                    return fetch(url)
-                        .then(function(response) {
-                            return response.json();
-                        })
-                        .then(function(json) {
-                            return json.available;
-                        });
-                };
+            validator: (email) => {
+              return () => {
+                console.log(kot + " "+email)
+                const url = "./LogInBackEnd/login-validation.php?email=" + encodeURIComponent(kot) + "&password=" + encodeURIComponent(email);
+                console.log(url);
+          
+                return fetch(url)
+                  .then(function(response) {
+                    if (!response.ok) {
+                      throw new Error("Network response was not ok");
+                    }
+                    return response.json();
+                  })
+                  .then(function(json) {
+                    return json.available;
+                  })
+        
+            }  
+                  
             },
             errorMessage: "Invalid Password"
-        }
+          }
     ])
 
     .onSuccess((event) => {
