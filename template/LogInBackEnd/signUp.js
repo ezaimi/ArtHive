@@ -1,7 +1,6 @@
-console.log("Dav");
+
 const validation = new JustValidate("#signUp");
 
-console.log("namebitch");
 
 var nameError = document.getElementById('name-error');
 var emailError = document.getElementById('email-error');
