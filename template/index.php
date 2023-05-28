@@ -33,8 +33,9 @@
   <link rel="stylesheet" href="preloader.css" />
   <link rel="stylesheet" href="./css/login_register_css/login.css" />
   <link rel="stylesheet" href="./css/login_register_css/loginArtist.css" />
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-  <script src="./LogInBackEnd/logIn.js" defer> </script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  <script src="./LogInBackEnd/signUp.js" defer> </script>
+  <script src="./LogInBackEnd/login.js" defer> </script>
 
   <style>
     .z{
@@ -124,10 +125,15 @@
 
 
   <div class="form-container login-container">
-    <form action="./LogInBackEnd/logIn_process.php" method="post">
+    <form action="./LogInBackEnd/logIn_process.php" method="post" id="signUp-logIn">
       <h1 id="popup-h1" style="color: #292929;">Log in to collect Art.</h1>
-      <input type="email" placeholder="Email" name="email">
-      <input type="password" placeholder="Password" name="password">
+      <div style="width: 100%;">
+      <input type="email" placeholder="Email" name="email" id="log_email">
+      </div>
+ <div style="width: 100%;">
+ <input type="password" placeholder="Password" name="password" id="log_pass">
+ </div>
+   
       <div class="content">
         <div class="checkbox">
           <!-- <input type="checkbox" name="checkbox" id="checkbox"> -->
