@@ -80,9 +80,7 @@
         <div class="contactHover">
           <a href="#contact_area">Contact</a>
         </div>
-        <button type="submit" class="searchButton">
-          <i class="fas fa-search"></i>
-        </button>
+        
       </div>
 
       <span class="search_menu">
