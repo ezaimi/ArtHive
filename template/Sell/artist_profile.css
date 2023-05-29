@@ -174,7 +174,7 @@ label[for="profile-upload"] {
 
 #save-profile-btn {
     position: absolute;
-    top: 78%;
+    top: 65%;
     left: 7%;
     border: none;
     border-radius: 20px;
@@ -193,14 +193,15 @@ label[for="profile-upload"] {
     padding: 10px;
     background-color: #ebebeb;
     color: #333;
-    top: 60%;
+    top: 53%;
     left: 7%;
 }
 
 #bioInput {
     position: absolute;
     width: 250px;
-    height: 50px;
+    margin-top: 0.75%;
+    height: 25px;
     padding: 10px;
     border: none;
     border-radius: 20px;
@@ -209,7 +210,7 @@ label[for="profile-upload"] {
     resize: vertical;
     background-color: #ebebeb;
     color: #333;
-    top: 65%;
+    top: 57%;
     left: 7%;
 
 }

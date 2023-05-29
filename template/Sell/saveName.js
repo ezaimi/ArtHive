@@ -1,3 +1,4 @@
+//update the text when the buttons are clicked
 const nameInput = document.getElementById("nameInput");
 const saveButton = document.getElementById("save-profile-btn");
 const artistName = document.getElementById("artistName");
@@ -16,12 +17,11 @@ saveButton.addEventListener("click", () => {
 });
 
 
-
+//appear and disappear the forms
 const editProfileBtn = document.getElementById('edit-profile-btn');
 const saveProfileBtn = document.getElementById('save-profile-btn');
 const nameContainer = document.getElementById('nameContainer');
 const bioContainer = document.getElementById('bioContainer');
-
 
 
 editProfileBtn.addEventListener('click', () => {
