@@ -7,6 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist Profile</title>
 
+    <style type="text/css">
+        @font-face {
+            font-family: fontG;
+            font-style: normal;
+            font-weight: normal;
+            src: url('GlacialIndifference-Regular.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: fontGBold;
+            font-style: normal;
+            font-weight: normal;
+            src: url('GlacialIndifference-Bold.woff') format('woff');
+        }
+    </style>
+
     <!--CSS files here-->
     <link rel="stylesheet" href="./artist_profile.css" />
 
@@ -24,12 +40,49 @@
                     <img src="uploadLogo-removebg-preview.png" alt="Icon Image">
                 </span></i></label>
     </div>
+    <div id="artistContainer">
+        <div id="artistName">Loren</div>
+        <div id="artistSurname"></div>
+    </div>
+    <p id="bioText">This is a Description</p>
+    <button id="edit-profile-btn">Edit Profile</button>
+
+    <div id="nameContainer" style="display: none;">
+        <input type="text" id="nameInput" placeholder="Name">
+    </div>
+
+    <div id="bioContainer" style="display: none;">
+        <textarea id="bioInput" placeholder="Bio"></textarea>
+    </div>
+
+    <button id="save-profile-btn">Save</button>
+
+    <hr class="circle-line">
+
+
+    <div class="artist-navBar">
+
+        <div class="artworksBar"><a href="#artworksL">Artworks</a></div>
+
+
+        <div class="createBar"><a href="#createL">Create</a></div>
+
+
+        <div class="profitBar"><a href="#profitL">Profit</a></div>
+
+
+        <div class="logoutBar"><a href="#logoutL">Log Out</a></div>
+
+
+    </div>
+
 
 
 
 
     <!--JS files here-->
     <script src="./artist_profileJS.js"></script>
+    <script src="./saveName.js"></script>
 
 </body>
 
