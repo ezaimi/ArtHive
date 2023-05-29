@@ -17,8 +17,8 @@ body {
     top: 30%;
     left: 15%;
     transform: translate(-50%, -50%);
-    width: 350px;
-    height: 350px;
+    width: 290px;
+    height: 290px;
     border-radius: 50%;
     background-color: #ffffff;
 
@@ -32,8 +32,8 @@ body {
     position: absolute;
     top: 30%;
     left: 15%;
-    width: 330px;
-    height: 330px;
+    width: 270px;
+    height: 270px;
     transform: translate(-50%, -50%);
 }
 
