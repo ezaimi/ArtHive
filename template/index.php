@@ -491,7 +491,26 @@
            artwork.”
         </p>
       </div>
+      <div class="comment-col">
+        <div class="user1">
+          <img src="images/contact_img/user3.jpeg" alt="">
+          <div class="user-info">
+            <h4>Jon Harvey <i class="fa fa-twitter"></i></h4>
+            <small>@jon45</small>
+          </div>
+        </div>
+        <p>
+          “I appreciate that this 
+          website provides a platform 
+          for artists to sell their
+           artwork directly.
+           It supports the artists and 
+           allows art 
+           enthusiasts to own original pieces easily.”
+        </p>
+      </div>
       
+
 
 
 
