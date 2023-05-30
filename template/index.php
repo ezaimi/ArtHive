@@ -118,6 +118,7 @@
       <div class="z">
         <input type="password" placeholder="Password" name="password" id="password">
       </div>
+      <input type="hidden" placeholder="signUp" name="signUp" id="signUp" value="buyy">
       <button>Register</button>
     </form>
     </div>
@@ -173,7 +174,7 @@
 
   <div class="popup2" id="popup2">
   <div class="form-container register-container" method="post">
-    <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp2">
+    <form action="./LogInBackEnd/signUp_process11.php" method="post" id="signUp2">
       <h1 id="popup2-h1" style="color: #292929;">Join as an Artist</h1>
       <div class="z">
         <input type="text" placeholder="Name" name="name" id="name2">
@@ -185,6 +186,7 @@
       <div class="z">
         <input type="password" placeholder="Password" name="password" id="password2">
       </div>
+      <input type="hidden" placeholder="signUp2" name="signUp2" id="signUp2" value="selll">
       <button>Register</button>
     </form>
   </div>
