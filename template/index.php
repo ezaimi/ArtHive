@@ -471,7 +471,28 @@
   
       </div>
     </div>
-    
+    <div class="beforeFooter">
+      <h1>What Clients Say</h1> 
+    </div>
+    <div class="coment-row"> 
+      <div class="comment-col">
+        <div class="user1">
+          <img src="images/contact_img/user1.jpeg" alt="">
+          <div class="user-info">
+            <h4>Mabel Smith <i class="fa fa-twitter"></i></h4>
+            <small>@mabel13</small>
+          </div>
+        </div>
+        <p>
+          “The artist profiles on 
+          this website are comprehensive and informative.
+           It's fascinating to learn about the inspiration 
+           and techniques behind each 
+           artwork.”
+        </p>
+      </div>
+      
+
 
 
 </section>
