@@ -509,7 +509,24 @@
            enthusiasts to own original pieces easily.”
         </p>
       </div>
-      
+
+      <div class="comment-col">
+        <div class="user1">
+          <img src="images/contact_img/user2.jpeg" alt="">
+          <div class="user-info">
+            <h4> Soo Ae<i class="fa fa-twitter"></i></h4>
+            <small>@AaSoo1</small>
+          </div>
+        </div>
+        <p>
+          “이 작품은 완벽한 조화입니다
+          전통과 혁신의 그것
+          고전적인 기술에 경의를 표하면서
+          모던한 요소를 접목한.”
+        </p>
+      </div>
+    </div>
+
 
 
 
