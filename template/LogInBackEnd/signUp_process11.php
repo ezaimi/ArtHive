@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $formId = $_POST['signUp']; // Assuming you have added a hidden input field with the ID value
+    $formId = $_POST['signUp2']; // Assuming you have added a hidden input field with the ID value
 }
 
 
@@ -56,5 +56,4 @@ try {
 }
 
 
-
-// ?>
+ ?>

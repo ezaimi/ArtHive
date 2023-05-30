@@ -39,10 +39,6 @@ validation1
             errorMessage: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please enter a password",
         },
         {
-            rule: "password",
-            errorMessage: "Not valid Password",
-        },
-        {
             validator: (email) => {
               return () => {
                 console.log(kot + " "+email)
