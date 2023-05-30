@@ -160,6 +160,7 @@ ul li a {
 
   width: 100%;
   padding: 70px 0;
+  height: 22px;
 }
 
 .comment-col{
@@ -176,4 +177,35 @@ ul li a {
 .comment-col p{
   font-size: 14px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.user1{
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.user1 img{
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 4px;
+  height:40px;
+}
+.user-info .fa{
+  margin-left: 10px;
+  color:#27c0ff;
+  font-size:20px ;
+  visibility:visible;
+}
+.user-info small{
+  color: #009688;
+}
+.comment-col:hover{
+  transform: translateY(-7px);
+}
+.coment-row{
+  display: flex;
+  /* width:80px; */
+  justify-content: space-between;
+  margin: 40px;
+  margin-bottom: 265px;
 }
