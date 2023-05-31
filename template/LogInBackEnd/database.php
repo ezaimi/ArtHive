@@ -1,6 +1,6 @@
 <?php
 $host="localhost";
-$dbname="users";
+$dbname="arthive_db";
 $username="root";
 $password = "";
 

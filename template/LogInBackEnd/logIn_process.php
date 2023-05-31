@@ -16,20 +16,17 @@ if($user){
       session_start();
       session_regenerate_id();
       $_SESSION["user_id"] = $user["id"];
-if( $user["level"] === 'buyy')
-{
+
+
   header("location: ../buy.html");
-}
-else{
-  header("location: ../sell.html");
-}
+
 
    
       exit;
-    }
+    
 }
 }
-
+}
 ?>
 
 
