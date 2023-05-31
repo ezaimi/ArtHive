@@ -2,7 +2,7 @@
 
 $mySqli = require __DIR__ . "/database.php";
 
-$sql = sprintf("SELECT * FROM artist_data WHERE artist_email = '%s'", $mySqli->real_escape_string($_GET["email"]));
+$sql = sprintf("SELECT * FROM artist_table WHERE artist_email = '%s'", $mySqli->real_escape_string($_GET["email"]));
 $result = $mySqli->query($sql);
 
 // print_r($result);
