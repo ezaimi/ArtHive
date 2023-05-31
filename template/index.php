@@ -36,6 +36,7 @@
   <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
   <script src="./LogInBackEnd/signUp.js" defer> </script>
   <script src="./LogInBackEnd/login.js" defer> </script>
+  <script src="./LogInBackEnd/login11.js" defer> </script>
 
   <style>
     .z{
@@ -194,10 +195,10 @@
 
 
   <div class="form-container login-container">
-    <form action="./LogInBackEnd/logIn_process11.php" method="post">
+    <form action="./LogInBackEnd/logIn_process11.php" method="post" id="log-Inn">
       <h1 id="popup-h1" style="color: #292929;">Log in to show your Art!</h1>
-      <input type="email" placeholder="Email" name="email">
-      <input type="password" placeholder="Password" name="password">
+      <input type="email" placeholder="Email" name="email" id="log_email">
+      <input type="password" placeholder="Password" name="password" id="log_pass">
       <div class="content">
         <div class="checkbox">
           <!-- <input type="checkbox" name="checkbox" id="checkbox"> -->
