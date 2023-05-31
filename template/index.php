@@ -36,7 +36,7 @@
   <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
   <script src="./LogInBackEnd/signUp.js" defer> </script>
   <script src="./LogInBackEnd/login.js" defer> </script>
-  <script src="./LogInBackEnd/login11.js" defer> </script>
+  <script src="./LogInBackEnd/logIn11.js" defer> </script>
 
   <style>
     .z{
@@ -119,7 +119,6 @@
       <div class="z">
         <input type="password" placeholder="Password" name="password" id="password">
       </div>
-      <input type="hidden" placeholder="signUp" name="signUp" id="signUp" value="buyy">
       <button>Register</button>
     </form>
     </div>
@@ -187,7 +186,6 @@
       <div class="z">
         <input type="password" placeholder="Password" name="password" id="password2">
       </div>
-      <input type="hidden" placeholder="signUp2" name="signUp2" id="signUp2" value="selll">
       <button>Register</button>
     </form>
   </div>
@@ -197,8 +195,14 @@
   <div class="form-container login-container">
     <form action="./LogInBackEnd/logIn_process11.php" method="post" id="log-Inn">
       <h1 id="popup-h1" style="color: #292929;">Log in to show your Art!</h1>
-      <input type="email" placeholder="Email" name="email" id="log_email">
-      <input type="password" placeholder="Password" name="password" id="log_pass">
+      <div style="width: 100%;">
+      <input type="email" placeholder="Email" name="email" id="log_email2">
+      </div>
+ <div style="width: 100%;">
+ <input type="password" placeholder="Password" name="password" id="log_pass2">
+ </div>
+
+   
       <div class="content">
         <div class="checkbox">
           <!-- <input type="checkbox" name="checkbox" id="checkbox"> -->

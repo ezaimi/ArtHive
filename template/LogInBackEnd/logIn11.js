@@ -1,9 +1,10 @@
-const validation1 = new JustValidate("#log-Inn");
- var kot = null;
-const lot = true
+console.log("Davidddddd");
+const validation4 = new JustValidate("#log-Inn");
+ var kot1 = null;
+const lot1 = true
 
-validation1
-    .addField("#log_email1", [
+validation4
+    .addField("#log_email2", [
         {
             rule: "required",
             errorMessage: "&nbsp;&nbsp;Please enter an email",
@@ -14,9 +15,9 @@ validation1
         },
         {
             validator: (value) => {
-                kot = value;
+                kot1 = value;
                 return () => {
-                    return fetch("./LogInBackEnd/email-loginvalidation.php?email=" + encodeURIComponent(value))
+                    return fetch("./LogInBackEnd/email-validation11.php?email=" + encodeURIComponent(value))
                         .then(function(response) {
                             return response.json();
                         })
@@ -38,8 +39,7 @@ validation1
         {
             validator: (email) => {
               return () => {
-                console.log(kot + " "+email)
-                const url = "./LogInBackEnd/login-validation.php?email=" + encodeURIComponent(kot) + "&password=" + encodeURIComponent(email);
+                const url = "./LogInBackEnd/login-validation11.php?email=" + encodeURIComponent(kot1) + "&password=" + encodeURIComponent(email);
                 console.log(url);
           
                 return fetch(url)

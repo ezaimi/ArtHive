@@ -1,9 +1,5 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $formId = $_POST['signUp']; // Assuming you have added a hidden input field with the ID value
-}
-
 
 if(empty($_POST["name"]))
 {
@@ -30,7 +26,7 @@ if(!$mySQL)
     die("Failed to connect to the database");
 }
 
-$sql="INSERT INTO user_data(name,email,password,level) VALUES (? ,?,?,?)";
+$sql="INSERT INTO user_data(name,email,password) VALUES (? ,?,?)";
 
 $stmt = $mySQL->stmt_init();
 
@@ -39,7 +35,7 @@ if (!$stmt->prepare($sql)) {
 }
 
 
-$stmt->bind_param("ssss", $_POST["name"], $_POST["email"], $pass_hash,$formId);
+$stmt->bind_param("sss", $_POST["name"], $_POST["email"], $pass_hash);
 
 try {
     if ($stmt->execute()) {
