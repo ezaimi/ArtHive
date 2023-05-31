@@ -38,19 +38,23 @@ validation4
         },
         {
             validator: (email) => {
+                console.log(kot1 + " " + email);
               return () => {
                 const url = "./LogInBackEnd/login-validation11.php?email=" + encodeURIComponent(kot1) + "&password=" + encodeURIComponent(email);
-                console.log(url);
+       
           
                 return fetch(url)
                   .then(function(response) {
+                    console.log(json);
                     if (!response.ok) {
                       throw new Error("Network response was not ok");
                     }
+                    console.log(json);
                     return response.json();
                   })
                   .then(function(json) {
-                    return json.available;
+                    console.log(json);
+                    return !json.available;
                   })
         
             }  

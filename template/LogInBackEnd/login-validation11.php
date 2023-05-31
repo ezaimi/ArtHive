@@ -4,12 +4,13 @@ $sql = sprintf("SELECT * FROM artist_table WHERE artist_email = '%s'", $mySqli->
 $result = $mySqli->query($sql);
 
 $user = $result->fetch_assoc();
+print_r($user);
 
 $isAvailable1 = false;
 
-$value = trim($_GET["artist_password"], '"');
+$value = trim($_GET["password"], '"');
 if ($user) {
-    if (password_verify($value, $user["password"])) {
+    if (password_verify($value, $user["artist_password"])) {
         $isAvailable1 = true;
         header("Content-type: application/json");
         echo json_encode(["available" => $isAvailable1]);

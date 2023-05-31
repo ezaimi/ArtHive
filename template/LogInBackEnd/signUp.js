@@ -75,7 +75,7 @@ validation
 
 
 
-
+console.log("DAVID");
 validation2
     .addField("#name2", [
         {
@@ -103,11 +103,12 @@ validation2
         {
             validator: (value) => {
                 return () => {
-                    return fetch("./LogInBackEnd/email-validation.php?email=" + encodeURIComponent(value))
+                    return fetch("./LogInBackEnd/email-validation11.php?email=" + encodeURIComponent(value))
                         .then(function(response) {
                             return response.json();
                         })
                         .then(function(json) {
+                            console.log(json);
                             return json.available;
                         });
                 };
