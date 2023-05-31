@@ -2,6 +2,7 @@
 
 if(empty($_POST["name"]))
 {
+    echo "lot";
     die("Please enter a name") ;
 }
 

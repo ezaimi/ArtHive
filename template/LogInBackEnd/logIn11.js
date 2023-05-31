@@ -1,10 +1,9 @@
-
-const validation1 = new JustValidate("#signUp-logIn");
+const validation1 = new JustValidate("#log-Inn");
  var kot = null;
 const lot = true
 
 validation1
-    .addField("#log_email", [
+    .addField("#log_email1", [
         {
             rule: "required",
             errorMessage: "&nbsp;&nbsp;Please enter an email",
@@ -31,7 +30,7 @@ validation1
         
     ])
 
-    .addField("#log_pass", [
+    .addField("#log_pass2", [
         {
             rule: "required",
             errorMessage: "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please enter a password",
@@ -62,10 +61,5 @@ validation1
     ])
 
     .onSuccess((event) => {
-        document.getElementById("signUp-logIn").submit();
+        document.getElementById("log-Inn").submit();
     });
-
-
-
-
-    
