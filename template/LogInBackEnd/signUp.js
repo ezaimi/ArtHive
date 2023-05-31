@@ -138,3 +138,5 @@ validation2
     .onSuccess((event) => {
         document.getElementById("signUp2").submit();
     });
+
+    console.log("prova");
