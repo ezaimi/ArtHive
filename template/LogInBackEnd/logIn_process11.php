@@ -3,7 +3,7 @@
 if($_SERVER["REQUEST_METHOD"]==="POST")
 {
     $mySQL=require __DIR__ . "/database.php";
-    $sql=sprintf("SELECT * from user_data WHERE email='%s'",$mySQL->real_escape_string($_POST["email"]));
+    $sql=sprintf("SELECT * from artist_table WHERE artist_email='%s'",$mySQL->real_escape_string($_POST["email"]));
 
 
     $result =$mySQL->query($sql);
@@ -12,13 +12,13 @@ if($_SERVER["REQUEST_METHOD"]==="POST")
 
 if($user){
   
-    if(password_verify($_POST["password"], $user["password"])){
+    if(password_verify($_POST["password"], $user["artist_password"])){
       session_start();
       session_regenerate_id();
-      $_SESSION["user_id"] = $user["id"];
+      $_SESSION["user_id"] = $user["artist_id"];
 
 
-  header("location: ../buy.html");
+  header("location: ../sell.php");
 
 
    
@@ -28,5 +28,3 @@ if($user){
 }
 }
 ?>
-
-
