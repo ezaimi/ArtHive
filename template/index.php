@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  
   <title>ArtHive</title>
-  <!--font-->
+  <!--font--> 
   <style type="text/css">
     @font-face {
       font-family: myFont;
@@ -441,15 +441,105 @@
 
 
 
-    <!--Wave Shape-->
+    <!--  Klea-->
 
-    <div class="custom-shape-divider-bottom-1684688853">
+    <!-- <div class="custom-shape-divider-bottom-1684688853">
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path
           d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
           class="shape-fill"></path>
       </svg>
+    </div> -->
+    <!-- <div class="custom-shape-divider-bottom-1684688853">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path
+      d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+      class="shape-fill"></path>
+  </svg>
+</div> -->
+<section>
+<!-- <div class="custom-shape-divider-bottom-1684688853">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        -- <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill" ></path> ->
+          <path d="M 985.66 92.83 C 906.67 72 823.78 31 743.84 14.19 c -82.26 -17.34 -168.06 -16.33 -250.45 0.39 c -57.84 11.73 -114 31.07 -172 41.86 A 600.21 600.21 0 0 1 0 27.35 V 120 H 1200 V 95.8 C 1132.19 118.92 1055.71 111.31 985.66 92.83 Z" fill="#292929"/>
+
+      </svg> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class=single-cat mb-50 wow fadeInUp data-wow-duration="1s" data-wow-delay=".2s"
+            style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInUp;">
+            </div>
+          </div>
+          
+        </div>
+  
+      </div>
     </div>
+    <div class="beforeFooter">
+      <h1>What Clients Say</h1> 
+    </div>
+    <div class="coment-row"> 
+      <div class="comment-col">
+        <div class="user1">
+          <img src="images/contact_img/user1.jpeg" alt="">
+          <div class="user-info">
+            <h4>Mabel Smith <i class="fa fa-twitter"></i></h4>
+            <small>@mabel13</small>
+          </div>
+        </div>
+        <p>
+          “The artist profiles on 
+          this website are comprehensive and informative.
+           It's fascinating to learn about the inspiration 
+           and techniques behind each 
+           artwork.”
+        </p>
+      </div>
+      <div class="comment-col">
+        <div class="user1">
+          <img src="images/contact_img/user3.jpeg" alt="">
+          <div class="user-info">
+            <h4>Jon Harvey <i class="fa fa-twitter"></i></h4>
+            <small>@jon45</small>
+          </div>
+        </div>
+        <p>
+          “I appreciate that this 
+          website provides a platform 
+          for artists to sell their
+           artwork directly.
+           It supports the artists and 
+           allows art 
+           enthusiasts to own original pieces easily.”
+        </p>
+      </div>
+
+      <div class="comment-col">
+        <div class="user1">
+          <img src="images/contact_img/user2.jpeg" alt="">
+          <div class="user-info">
+            <h4> Soo Ae<i class="fa fa-twitter"></i></h4>
+            <small>@AaSoo1</small>
+          </div>
+        </div>
+        <p>
+          “이 작품은 완벽한 조화입니다
+          전통과 혁신의 그것
+          고전적인 기술에 경의를 표하면서
+          모던한 요소를 접목한.”
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+</section>
+
 
 
 
