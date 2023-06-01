@@ -1,47 +1,65 @@
-// Wait for the document to load
-document.addEventListener("DOMContentLoaded", function () {
-    // Get the necessary elements
-    var editProfileBtn = document.getElementById("edit-profile-btn");
-    var nameContainer = document.getElementById("nameContainer");
-    var nameInput = document.getElementById("nameInput");
-    var saveProfileBtn = document.getElementById("save-profile-btn");
-    var artistName = document.getElementById("artistName");
+// // Get the input fields and buttons
+// var nameContainer1 = document.getElementById("nameContainer");
+// var bioContainer1 = document.getElementById("bioContainer");
+// var nameInput1 = document.getElementById("nameInput");
+// var bioInput1 = document.getElementById("bioInput");
+// var editBtn = document.getElementById("edit-profile-btn");
+// var saveBtn = document.getElementById("save-profile-btn");
 
-    // Add click event listener to the Edit Profile button
-    editProfileBtn.addEventListener("click", function () {
-        // Hide the artist name and show the name input field
-        artistName.style.display = "none";
-        nameContainer.style.display = "block";
-        nameInput.value = artistName.textContent.trim();
-    });
+// // Add event listener to the edit button
+// editBtn.addEventListener("click", function () {
+//     // Hide the name and bio elements
+//     nameContainer1.style.display = "block";
+//     bioContainer1.style.display = "block";
 
-    // Add click event listener to the Save button
-    saveProfileBtn.addEventListener("click", function () {
-        // Retrieve the updated name
-        var updatedName = nameInput.value.trim();
+//     // Show the input fields and save button
+//     nameInput1.style.display = "none";
+//     bioInput1.style.display = "none";
+//     saveBtn.style.display = "none";
+// });
 
-        // Perform form validation if necessary
+// // Add event listener to the save button
+// saveBtn.addEventListener("click", function () {
+//     // Get the values from the input fields
+//     var name = nameInput1.value;
+//     var bio = bioInput1.value;
 
-        // Send an AJAX request to update the name in the database
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "update_name.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                // Handle the response from the server
-                var response = xhr.responseText;
-                if (response === "success") {
-                    // Update the artist name on the page
-                    artistName.textContent = updatedName;
-                    // Hide the name input field and show the artist name
-                    artistName.style.display = "block";
-                    nameContainer.style.display = "none";
-                } else {
-                    // Handle error case
-                    console.log("Error: " + response);
-                }
-            }
-        };
-        xhr.send("name=" + encodeURIComponent(updatedName));
-    });
-});
+//     // Create a new XMLHttpRequest object
+//     var xhr = new XMLHttpRequest();
+
+//     // Prepare the request
+//     xhr.open("POST", "update_profile.php", true);
+//     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+//     // Set up the data to send
+//     var data = "name=" + encodeURIComponent(name) + "&bio=" + encodeURIComponent(bio);
+
+//     // Send the request
+//     xhr.send(data);
+
+//     // Handle the response
+//     xhr.onreadystatechange = function () {
+//         if (xhr.readyState === XMLHttpRequest.DONE) {
+//             if (xhr.status === 200) {
+//                 // Success - do something here if needed
+//                 // For example, display a success message
+//                 console.log("Profile updated successfully");
+
+//                 // Hide the input fields and save button
+//                 nameInput1.style.display = "none";
+//                 bioInput1.style.display = "none";
+//                 saveBtn.style.display = "none";
+
+//                 // Show the name and bio elements with updated values
+//                 nameContainer1.style.display = "block";
+//                 bioContainer1.style.display = "block";
+//                 document.getElementById("artistName").textContent = name;
+//                 document.getElementById("bioText").textContent = bio;
+//             } else {
+//                 // Error - do something here if needed
+//                 // For example, display an error message
+//                 console.error("Error updating profile");
+//             }
+//         }
+//     };
+// });
