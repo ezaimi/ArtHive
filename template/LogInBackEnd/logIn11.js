@@ -17,6 +17,7 @@ validation4
             validator: (value) => {
                 kot1 = value;
                 return () => {
+                    console.log("okkk");
                     return fetch("./LogInBackEnd/email-validation11.php?email=" + encodeURIComponent(value))
                         .then(function(response) {
                             return response.json();
@@ -38,30 +39,22 @@ validation4
         },
         {
             validator: (email) => {
-                console.log(kot1 + " " + email);
               return () => {
-                const url = "./LogInBackEnd/login-validation11.php?email=" + encodeURIComponent(kot1) + "&password=" + encodeURIComponent(email);
-       
-          
-                return fetch(url)
+                return fetch("./LogInBackEnd/login-validation11.php?email=" + encodeURIComponent(kot1) + "&password=" + encodeURIComponent(email))
                   .then(function(response) {
-                    console.log(json);
                     if (!response.ok) {
                       throw new Error("Network response was not ok");
                     }
-                    console.log(json);
                     return response.json();
                   })
                   .then(function(json) {
-                    console.log(json);
-                    return !json.available;
-                  })
-        
-            }  
-                  
+                    return json.available;
+                  });
+              };
             },
             errorMessage: "Invalid Password"
-          }
+          },
+         
     ])
 
     .onSuccess((event) => {

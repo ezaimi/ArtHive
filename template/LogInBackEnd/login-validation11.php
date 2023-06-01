@@ -4,7 +4,6 @@ $sql = sprintf("SELECT * FROM artist_table WHERE artist_email = '%s'", $mySqli->
 $result = $mySqli->query($sql);
 
 $user = $result->fetch_assoc();
-print_r($user);
 
 $isAvailable1 = false;
 
@@ -17,5 +16,7 @@ if ($user) {
         exit;
     }
 }
-header("Content-type: application/json");
+else{
+    header("Content-type: application/json");
 echo json_encode(["available" => $isAvailable1]);
+}
