@@ -24,6 +24,9 @@ const nameContainer = document.getElementById('nameContainer');
 const bioContainer = document.getElementById('bioContainer');
 
 
+
+
+
 editProfileBtn.addEventListener('click', () => {
     artistName.style.display = 'none';
     bioText.style.display = 'none';
@@ -48,4 +51,66 @@ saveProfileBtn.addEventListener('click', () => {
     artistName.style.display = 'block';
     bioText.style.display = 'block';
     editProfileBtn.style.display = 'block';
+});
+
+// Add event listener to the edit button
+editProfileBtn.addEventListener("click", function () {
+    // Hide the name and bio elements
+    artistName.style.display = "none";
+    bioText.style.display = "none";
+
+    // Show the input fields and save button
+    nameContainer.style.display = "block";
+    bioContainer.style.display = "block";
+    saveProfileBtn.style.display = "block";
+
+    // Set the input values to the current artist name and bio
+    nameInput.value = artistName.textContent;
+    bioInput.value = bioText.textContent;
+});
+
+// Add event listener to the save button
+saveProfileBtn.addEventListener("click", function () {
+    // Get the values from the input fields
+    var name = nameInput.value;
+    var bio = bioInput.value;
+
+    // Create a new XMLHttpRequest object
+    var xhr = new XMLHttpRequest();
+
+    // Prepare the request
+    xhr.open("POST", "update_name.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    // Set up the data to send
+    var data = "name=" + encodeURIComponent(name) + "&bio=" + encodeURIComponent(bio);
+
+    // Send the request
+    xhr.send(data);
+
+    // Handle the response
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                // Success - do something here if needed
+                // For example, display a success message
+                console.log("Profile updated successfully");
+
+                // Hide the input fields and save button
+                nameContainer.style.display = "none";
+                bioContainer.style.display = "none";
+                saveProfileBtn.style.display = "none";
+
+                // Show the name and bio elements with updated values
+                artistName.style.display = "block";
+                bioText.style.display = "block";
+                artistName.textContent = name;
+                bioText.textContent = bio;
+            } else {
+                // Error - do something here if needed
+                // For example, display an error message
+                console.error("Error updating profile");
+            }
+        }
+    };
 });

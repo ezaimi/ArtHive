@@ -1,7 +1,8 @@
 <?php
+session_start();
 
 $name = $_POST['name'];
-
+$bio = $_POST['bio'];
 
 $servername = "localhost";
 $username = "root";
@@ -14,10 +15,26 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+$artistID = $_SESSION['artist_id'];
+
+var_dump($artistID);
+
 
 // Assuming you have a table named "users" with columns "id" and "artist_name"
 // Update the user's name in the database based on the logged-in user's ID
-$sql = "UPDATE artist_table SET artist_name = '$name' WHERE artist_id = 1"; // Replace 'id' with the appropriate column name and the corresponding user ID
+$sql = "UPDATE artist_table SET artist_name = '$name' WHERE artist_id = '$artistID'"; // Replace 'id' with the appropriate column name and the corresponding user ID
+
+if ($conn->query($sql) === TRUE) {
+    // Successful update
+    echo "success";
+  } else {
+    // Error updating record
+    echo "Error updating record: " . $conn->error;
+  }
+
+
+
+$sql = "UPDATE artist_table SET artist_bio = '$bio' WHERE artist_id = '$artistID'";
 
 if ($conn->query($sql) === TRUE) {
   // Successful update
@@ -26,7 +43,7 @@ if ($conn->query($sql) === TRUE) {
   // Error updating record
   echo "Error updating record: " . $conn->error;
 }
-
+echo "Artist ID: " . $artistID;
 // Close the database connection
 $conn->close();
 ?>
