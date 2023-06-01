@@ -1,5 +1,12 @@
 <?php
 session_start();
+if(isset($_SESSION["user_id"])){
+    $mySqli = require __DIR__ . "../../LogInBackEnd/database.php";
+$sql = "SELECT * FROM artist_table WHERE artist_id = {$_SESSION["user_id"]}";
+$result = $mySqli->query($sql);
+
+$user = $result->fetch_assoc();
+}
 
 $name = $_POST['name'];
 $bio = $_POST['bio'];
@@ -12,10 +19,10 @@ $dbname = "arthive_db";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+die("Connection failed: " . $conn->connect_error);
 }
 
-$artistID = $_SESSION['artist_id'];
+$artistID = $user['artist_id'];
 
 var_dump($artistID);
 
