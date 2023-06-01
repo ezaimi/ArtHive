@@ -18,7 +18,7 @@ if($user){
       $_SESSION["user_id"] = $user["artist_id"];
 
 
-  header("location: ../sell.php");
+  header("location: ../Sell/artistProfile.html");
 
 
    

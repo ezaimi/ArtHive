@@ -1,3 +1,18 @@
+<?php
+   session_start();
+if(isset($_SESSION["user_id"])){
+    $mySqli = require __DIR__ . "../../LogInBackEnd/database.php";
+$sql = "SELECT * FROM artist_table WHERE artist_id = {$_SESSION["user_id"]}";
+$result = $mySqli->query($sql);
+
+$user = $result->fetch_assoc();
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,10 +56,10 @@
                 </span></i></label>
     </div>
     <div id="artistContainer">
-        <div id="artistName">Loren</div>
+        <div id="artistName"><?=$user["artist_name"] ?></div>
         <!-- <div id="artistSurname"></div> -->
     </div>
-    <p id="bioText">This is a Description</p>
+    <p id="bioText"><?=$user["artist_bio"] ?></p>
     <button id="edit-profile-btn">Edit Profile</button>
 
     <div id="nameContainer" style="display: none;">
@@ -76,13 +91,14 @@
 
     </div>
 
-
+   
 
 
 
     <!--JS files here-->
     <script src="./artist_profileJS.js"></script>
     <script src="./saveName.js"></script>
+    <script src="./updateName.js"></script>
 
 </body>
 
