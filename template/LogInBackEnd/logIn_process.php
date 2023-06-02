@@ -18,7 +18,7 @@ if($user){
       $_SESSION["user_id"] = $user["id"];
 
 
-  header("location: ../buy.html");
+  header("location: ../buy/index.html");
 
 
    
