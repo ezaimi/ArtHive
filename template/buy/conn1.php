@@ -1,6 +1,7 @@
 <?php
 function connectDB()
 {
+    // dataBase concection
     $sname = "localhost";
     $uname = "root";
     $pass = "";
