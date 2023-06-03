@@ -1,6 +1,7 @@
 <?php
 function connectDB()
 {
+    // dataBase concection
     $sname = "localhost";
     $uname = "root";
     $pass = "";
@@ -11,7 +12,7 @@ function connectDB()
 
     // Check the connection
     if (!$conn) {
-        die('Connection faile');
+        die('Connection failed');
     }
     else{
         echo"bravoo";
