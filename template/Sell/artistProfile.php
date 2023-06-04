@@ -39,10 +39,12 @@ if (isset($_FILES['profile-upload'])) {
         // Move the uploaded file to the secure directory
         $destination = $uploadDir . $fileName;
         echo 'Hello';
+        print_r ($destination);
         if (move_uploaded_file($fileTmpName, $destination)) {
             // Update the artist_table with the new profile picture
             $sql = "UPDATE artist_table SET artist_profilepic = '$destination' WHERE artist_id = $artistID";
             echo $sql;
+           
 
             if ($conn->query($sql) === TRUE) {
 
