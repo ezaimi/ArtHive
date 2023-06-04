@@ -98,6 +98,8 @@ $conn->close();
 
     <!--CSS files here-->
     <link rel="stylesheet" href="./artist_profile.css" />
+    <link rel="stylesheet" href="../Sell/Sell_css/create.css">
+
 
 <body>
     <div class="artistProfile-rectangle"></div>
@@ -151,6 +153,30 @@ $conn->close();
 
     </div>
 
+
+    
+    <div class="create-container" style="margin-left: 25em; height: 400px; margin-right: 5em; margin-top: -10em">
+    <div class="inputs">
+        <input type="text" placeholder="Title" name="sell-title" id="sell-title">
+        <select name="sell-category" id="sell-category">
+            <option value="" disabled selected>Category</option>
+            <option value="painting">Painting</option>
+            <option value="photography">Photography</option>
+            <option value="sculpture">Sculpture</option>
+            <option value="pottery">Pottery</option>
+            <option value="quilling">Quilling</option>
+        </select>
+        <textarea placeholder="Description" name="sell-description" id="sell-description" rows="5"></textarea>
+        <input type="text" placeholder="Price" name="sell_price" id="sell_price">
+        <button id="sell_save-button">Save</button>
+    </div>
+    <div class="product-upload-photo">
+        <img src="../Sell/Sell_image/upload-icon.png" id="profileImage" alt="Profile Picture">
+        <input type="file" id="imageUpload" accept="image/*">
+    </div>
+    <p class="uploadImagePara">Upload Image</p>
+</div>
+
    
 
 
@@ -159,7 +185,7 @@ $conn->close();
     <script src="./artist_profileJS.js"></script>
     <script src="./saveName.js"></script>
     <script src="./updateName.js"></script>
-
+    <script src="../Sell/Sell_js/upload.js"></script>
 </body>
 
 </html>
