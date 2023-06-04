@@ -56,7 +56,7 @@ let products = [
     {
       id: 9,
       name: 'Photography',
-      image: 'ArtHive-Canva (5).jpg',
+      image: 'ArtHive-Canva (4).jpg',
       price: 140000,
       category: 'category5'
     },
