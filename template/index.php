@@ -142,11 +142,11 @@
     <div class="overlay-container">
       <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
       <div class="overlay">
-      <!-- <h2 class="close">x</h2> -->
 
         <div class="overlay-panel overlay-left">
-          
+
           <h1 class="title">Already have an Account?</h1>
+
           <p>Log in and immerse yourself in the art world!</p>
           <button class="ghost" id="login">Login
             <i class="lni lni-arrow-left login"></i>
@@ -158,6 +158,8 @@
           <button class="ghost" id="register">Register
             <i class="lni lni-arrow-right register"></i>
           </button>
+          <!-- <button id="cl">x</button> -->
+
         </div>
       </div>
     </div>
@@ -313,7 +315,8 @@
             with ArtHive!
           </h3>
           <button id="about_getReady" style="font-family: 'myFont'">
-            Get Ready
+          <!-- <a href="#" id="BuyPage" onclick="toggleBuy()"class="getr">Get Ready</a> -->
+          <a href="#" id="BuyPage" onclick="toggleBuy()" class="getr" style="text-decoration: none;">Get Ready</a>
           </button>
         </div>
 
@@ -695,6 +698,29 @@ navLinks.forEach(link => {
 
 // Set the 'active' class on the home link by default
 document.getElementById('homeLink').classList.add('active');
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var closeButton = document.getElementById('cl');
+//   var overlay = document.querySelector('.overlay-container .overlay');
+
+//   closeButton.addEventListener('click', function() {
+//     overlay.classList.add('hide');
+//   });
+// });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var closeButton = document.getElementById('cl');
+//   var popup = document.getElementById('popup');
+
+//   closeButton.addEventListener('click', function() {
+//     popup.style.display = 'none';
+   
+//   });
+// });
+
 
 
   </script>
