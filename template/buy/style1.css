@@ -33,7 +33,7 @@ h1{
 
 }
 header .shopping img{
-  width: 36px;
+ width:29px;
   position: relative;
   top: -8px;
 }
@@ -47,7 +47,7 @@ header .shopping span{
   position: absolute;
   top: -15px;
   left: 80%;
-  padding: 3px 10px;
+  padding: 0px 7px;
 }
 .list{
   display: grid;
@@ -115,7 +115,7 @@ header .shopping span{
   left:0px;
   font-weight: bold;
   font-size: 19px;
-  top:-1px;
+  top:27px;
   
 }
 .card2 h1{
@@ -185,7 +185,7 @@ header .shopping span{
   cursor: pointer;
   position: relative;
   left: 1vh;
-  top: -30px;
+  top: 13px;
 }
 .card .checkOut div:nth-child(2){
   position: relative;
@@ -204,7 +204,7 @@ header .shopping span{
   cursor: pointer;
   position: absolute;
   left: -13vh;
-  top: 79vh;
+  top: 86vh;
 }
 .listCard li{
   display: grid;
@@ -222,7 +222,7 @@ header .shopping span{
 .listCard li img{
   width: 109px;
   padding: 22px;
-  height: 123px;
+  height: 103px;
   object-fit: cover;
   /* width: 90%; */
 }
@@ -302,7 +302,7 @@ opacity: 0.3;
 }
 .likes img{
   top: 23vh;
-  width: 40px;
+  width: 31px;
   position: relative;
   /* left: -20px; */
   right: 16vh;
@@ -319,8 +319,8 @@ opacity: 0.3;
   color: #fff;
   position: absolute;
   top: 22vh;
-  left: 88.5%;
-  padding: 3px 10px;
+  left: 88.99%;
+  padding: 0px 7px;
 }
 
 .card2 {
@@ -386,9 +386,9 @@ opacity: 0.3;
   align-items: center;
 }
 .listCard2 li img{
-  width: 109px;
-  padding: 22px;
-  height: 123px;
+  width: 84px;
+  padding: 13px;
+  height: 93px;
   object-fit: cover;
 }
 .listCard2 li button{
@@ -410,6 +410,7 @@ opacity: 0.3;
   /* background-color: #85babb; */
   /* color: #f1f1f1; */
   padding: 10px;
+  width: 95px;
 }
 .filter button:hover,
 .filter button:focus {
@@ -465,13 +466,15 @@ border-color: #f1f1f1; /* Set the desired border color */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto auto;
-  gap: 60px;
+  gap: 34px;
+  row-gap: 70px;
 }
 
 .item {
   text-align: center;
   transition: transform 0.3s ease;
   position: relative;
+  transition:trabsform 1s ease;
 }
 
 .item img {
@@ -491,11 +494,11 @@ border-color: #f1f1f1; /* Set the desired border color */
 .item .title,
 .item .price {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: -52px;
+  left: -27px;
   transform: translate(-10px, 31px); 
   color: black;
-  padding: 5px 10px;
+  padding:-3px 10px;
   text-align: left;
   display: block;
   font-size: 12px;
@@ -602,7 +605,7 @@ ion-icon {
 
 .item .buttons {
   position: absolute;
-  bottom: -5vh;
+  bottom: -10.5vh;
   left: 114px;
   display: flex;
   justify-content: center;
@@ -610,6 +613,7 @@ ion-icon {
   width: calc(100% - 20px);
   text-align: center;
   padding: 10px;
+  background: transparent;
 }
 
 
@@ -629,13 +633,13 @@ ion-icon {
 
 .left-button {
   position: relative;
-  left: 141vh;
-  top: 24vh;
+  left: 153vh;
+  top: 31vh;
 }
 
 .right-button {
-  right: 52px;
-  top: 25vh;
+  right: 13px;
+  top: 32vh;
 }
 .r2,
 .l2{
@@ -647,13 +651,13 @@ ion-icon {
 .r2{
   background-color: transparent;
   position: relative;
-  left: 135vh;
-  top: 53vh;
+  left: 140vh;
+  top: 70vh;
   right: -46vh;
 }
 .l2{
   background-color: transparent;
   position: relative;
-  left: -25vh;
-  top: 53vh;
+  left: -27vh;
+  top: 70vh;
 }
