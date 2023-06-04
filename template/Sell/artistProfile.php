@@ -30,6 +30,7 @@ if (isset($_FILES['profile-upload'])) {
     echo 'Era';
     if ($fileError === UPLOAD_ERR_OK) {
         // Define the secure directory to store profile pictures (outside of web root)
+        
         $uploadDir = __DIR__ . '/profile-pics/';
 
         // Generate a unique filename
@@ -41,15 +42,16 @@ if (isset($_FILES['profile-upload'])) {
         echo 'Hello';
         print_r ($destination);
         if (move_uploaded_file($fileTmpName, $destination)) {
+            $fileName = basename($fileName); // Extract only the file name from the full path
             // Update the artist_table with the new profile picture
-            $sql = "UPDATE artist_table SET artist_profilepic = '$destination' WHERE artist_id = $artistID";
+            $sql = "UPDATE artist_table SET artist_profilepic = '$fileName' WHERE artist_id = $artistID";
             echo $sql;
            
 
             if ($conn->query($sql) === TRUE) {
 
                 // Successful update
-                $_SESSION['profile_picture'] = $destination;
+                $_SESSION['profile_picture'] = $fileName;
                 echo "success";
             } else {
                 // Error updating record
@@ -64,6 +66,9 @@ if (isset($_FILES['profile-upload'])) {
         echo "Error uploading file";
     }
 }
+
+
+ 
 
 // Close the database connection
 $conn->close();
@@ -111,14 +116,23 @@ $conn->close();
     <div class="profile-pic-container">
         <div class="profile-pic">
             <!-- Display the uploaded profile picture here -->
-            <img id="profile-img" src="" alt=".">
+            <?php if (!empty($user["artist_profilepic"])): ?>
+                <img id="profile-img" src="./profile-pics/<?=$user["artist_profilepic"] ?>" alt="Profile Picture">
+            <?php else: ?>
+                <img id="profile-img" src="uploadLogo-removebg-preview.png" alt="Default Profile Picture">
+            <?php endif; ?>
         </div>
         <input type="file" id="profile-upload" accept="image/*">
-        <label for="profile-upload" id="upload-label"><i class="fas fa-upload"><span class="icon">
-                    <img src="uploadLogo-removebg-preview.png" alt="Icon Image">
-                </span></i></label>
+        <label for="profile-upload" id="upload-label">
+            <i class="fas fa-upload">
+            
+                <span class="icon"></span>
+            </i>
+        </label>
     </div>
-    </form>
+</form>
+
+
     <div id="artistContainer">
         <div id="artistName"><?=$user["artist_name"] ?></div>
         <!-- <div id="artistSurname"></div> -->
