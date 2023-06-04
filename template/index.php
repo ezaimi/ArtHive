@@ -84,17 +84,7 @@
         
       </div>
 
-      <span class="search_menu">
-        <!-- <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar" />
-        <span class="icon"><ion-icon name="ellipsis-horizontal"></ion-icon></span>
-        <span class="line">
-          <ion-icon name="remove-outline"></ion-icon>
-        </span>
-        <span class="searchIcon">
-          <ion-icon name="search-circle-outline"></ion-icon>
-        </span> -->
-        <img src="./images/home_img/logo1.png" alt="" id="logo1">
-      </span>
+ 
 
 
 
@@ -152,7 +142,10 @@
     <div class="overlay-container">
       <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
       <div class="overlay">
+      <!-- <h2 class="close">x</h2> -->
+
         <div class="overlay-panel overlay-left">
+          
           <h1 class="title">Already have an Account?</h1>
           <p>Log in and immerse yourself in the art world!</p>
           <button class="ghost" id="login">Login
@@ -169,6 +162,13 @@
       </div>
     </div>
 
+
+
+
+
+
+
+    
   </div>
 
   <!--ARTISTS login/register gui-->
@@ -485,7 +485,7 @@
       </div>
     </div>
     <div class="beforeFooter">
-      <h1 id="client">What Clients Say</h1> 
+      <h1 id="client">Art Enthusiasts</h1> 
     </div>
     <div class="coment-row"> 
       <div class="comment-col">

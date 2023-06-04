@@ -11,6 +11,10 @@
 
 
 }
+.close{
+  position: relative;
+  top: 20px;
+}
 #logo1{
   position: relative;
   top:-21vh;
@@ -118,7 +122,8 @@
   color: #282727;
 }
 #client{
-position: relative;
+  top: 5vh;
+  position: relative;
 }
 .dot {
   position: relative;
