@@ -107,8 +107,8 @@ div.popup2 p {
 
 
 div.popup2 span {
-    font-size: 14px;
-    margin-top: 25px;
+    font-size: 35px;
+    margin-top: -54px;
 }
 
 div.popup2 a {
@@ -389,4 +389,18 @@ div.popup2.overlay-container {
 
 .popup2.social-container a:hover {
     border: 1px solid #4bb6b7;
+}
+
+.cclose {
+    color: #725e5e;
+    position: relative;
+    top: -21vh;
+    left: 32vh;
+}
+.aclose{
+    color: #725e5e;
+    position: relative;
+    top: -13vh;
+    left: 28vh;
+ 
 }

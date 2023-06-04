@@ -16,6 +16,8 @@
     opacity: 0;
     transition: 0.5s;
     z-index: 9999;
+    background-color: rgba(246, 245, 247, 0.9); /* Update the background color with the desired value */
+
 }
 
 #popup.active {
@@ -106,8 +108,8 @@ div.popup p {
 
 
 div.popup span {
-    font-size: 14px;
-    margin-top: 25px;
+    font-size: 40px;
+    margin-top: -43px;
 }
 
 div.popup a {
@@ -384,3 +386,21 @@ div.popup input {
 .social-container a:hover {
     border: 1px solid #4bb6b7;
 }
+
+
+/* --------------- */
+.xclose{
+    position: relative;
+    top: -21vh;
+    left: 32vh;
+    color: #e1d6d6;
+}
+
+
+    .yclose {
+        color: #5d5454;
+        position: relative;
+        top: -15vh;
+        left: 28vh;
+    }
+    
