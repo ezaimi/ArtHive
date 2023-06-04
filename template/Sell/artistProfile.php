@@ -106,6 +106,7 @@ $conn->close();
     <!--CSS files here-->
     <link rel="stylesheet" href="./artist_profile.css" />
     <link rel="stylesheet" href="../Sell/Sell_css/create.css">
+    <link rel="stylesheet" href="../Sell/Sell_css/artworkNew.css">
 
 
 <body>
@@ -174,8 +175,13 @@ $conn->close();
     <div id="artworksSection" class="section">
     <!-- Artworks section content -->
         <div class="new-artist-div">
+                <div class="motivation">
+                "Start creating. Inspire the world."
+                </div>
 
         </div>
+
+        <button id="get-started-btn">Get Started</button>
     </div>
 
 
