@@ -58,3 +58,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+
+//when clicking the get-started-btn
+document.addEventListener('DOMContentLoaded', function () {
+    // ...
+
+    const getStartedButton = document.getElementById('get-started-btn');
+
+    getStartedButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        toggleSection(createLink, createSection);
+    });
+
+    // ...
+});
