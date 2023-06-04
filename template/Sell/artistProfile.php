@@ -1,14 +1,72 @@
 <?php
-   session_start();
-if(isset($_SESSION["user_id"])){
-    $mySqli = require __DIR__ . "../../LogInBackEnd/database.php";
-$sql = "SELECT * FROM artist_table WHERE artist_id = {$_SESSION["user_id"]}";
-$result = $mySqli->query($sql);
+session_start();
 
-$user = $result->fetch_assoc();
+if (isset($_SESSION["user_id"])) {
+    $mySqli = require __DIR__ . "../../LogInBackEnd/database.php";
+    $sql = "SELECT * FROM artist_table WHERE artist_id = {$_SESSION["user_id"]}";
+    $result = $mySqli->query($sql);
+
+    $user = $result->fetch_assoc();
 }
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "arthive_db";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$artistID = $user['artist_id'];
+
+if (isset($_FILES['profile-upload'])) {
+    $file = $_FILES['profile-upload'];
+    $fileName = $file['name'];
+    $fileTmpName = $file['tmp_name'];
+    $fileError = $file['error'];
+    echo 'Era';
+    if ($fileError === UPLOAD_ERR_OK) {
+        // Define the secure directory to store profile pictures (outside of web root)
+        $uploadDir = __DIR__ . '/profile-pics/';
+
+        // Generate a unique filename
+        $extension = pathinfo($fileName, PATHINFO_EXTENSION);
+        $fileName = uniqid() . '.' . $extension;
+
+        // Move the uploaded file to the secure directory
+        $destination = $uploadDir . $fileName;
+        echo 'Hello';
+        if (move_uploaded_file($fileTmpName, $destination)) {
+            // Update the artist_table with the new profile picture
+            $sql = "UPDATE artist_table SET artist_profilepic = '$destination' WHERE artist_id = $artistID";
+            echo $sql;
+
+            if ($conn->query($sql) === TRUE) {
+
+                // Successful update
+                $_SESSION['profile_picture'] = $destination;
+                echo "success";
+            } else {
+                // Error updating record
+                echo "Error updating record: " . $conn->error;
+            }
+        } else {
+            // Error moving the uploaded file
+            echo "Error moving the uploaded file.";
+        }
+    } else {
+        // Error uploading file
+        echo "Error uploading file";
+    }
+}
+
+// Close the database connection
+$conn->close();
 ?>
+
 
 
 
@@ -45,16 +103,18 @@ $user = $result->fetch_assoc();
     <div class="artistProfile-rectangle"></div>
     <div class="artistProfile-circle"></div>
 
+    <form id="profile-form" enctype="multipart/form-data">
     <div class="profile-pic-container">
         <div class="profile-pic">
             <!-- Display the uploaded profile picture here -->
-            <img id="profile-img" src="path/to/default-image.jpg" alt=".">
+            <img id="profile-img" src="" alt=".">
         </div>
         <input type="file" id="profile-upload" accept="image/*">
         <label for="profile-upload" id="upload-label"><i class="fas fa-upload"><span class="icon">
                     <img src="uploadLogo-removebg-preview.png" alt="Icon Image">
                 </span></i></label>
     </div>
+    </form>
     <div id="artistContainer">
         <div id="artistName"><?=$user["artist_name"] ?></div>
         <!-- <div id="artistSurname"></div> -->
