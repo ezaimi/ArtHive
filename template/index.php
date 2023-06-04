@@ -98,6 +98,7 @@
   <!--CUSTOMERS login/register gui-->
 
   <div class="popup" id="popup">
+
     <div class="form-container register-container" method="post">
       <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp">
         <h1 id="popup-h1" style="color: #292929;">Discover and Explore Art.</h1>
@@ -140,7 +141,7 @@
   </div>
 
     <div class="overlay-container">
-      <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
+
       <div class="overlay">
 
         <div class="overlay-panel overlay-left">
@@ -151,26 +152,24 @@
           <button class="ghost" id="login">Login
             <i class="lni lni-arrow-left login"></i>
           </button>
+
         </div>
         <div class="overlay-panel overlay-right">
           <h1 class="title">Start your journey!</h1>
+
           <p>No account yet? Join ArtHive Community as an Art Lover.</p>
           <button class="ghost" id="register">Register
             <i class="lni lni-arrow-right register"></i>
           </button>
+
+          
+
           <!-- <button id="cl">x</button> -->
 
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-    
+ 
   </div>
 
   <!--ARTISTS login/register gui-->
