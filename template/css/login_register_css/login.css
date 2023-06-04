@@ -2,7 +2,7 @@
     filter: blur(5px);
 }
 
-
+/*just to try smth out*/
 
 #popup {
     position: fixed;
@@ -384,12 +384,13 @@ div.popup input {
 .social-container a:hover {
     border: 1px solid #4bb6b7;
 }
+
 /* ------------------------------------ */
 .overlay-container {
     position: relative;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -400,14 +401,14 @@ div.popup input {
     align-items: center;
     opacity: 1;
     transition: opacity 0.3s ease;
-  }
-  
-  .overlay.hide {
+}
+
+.overlay.hide {
     opacity: 0;
     pointer-events: none;
-  }
-  
-  .overlay-panel {
+}
+
+.overlay-panel {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -415,22 +416,22 @@ div.popup input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
-  .overlay-left {
+}
+
+.overlay-left {
     transform: translateX(-100%);
-  }
-  
-  .overlay-right {
+}
+
+.overlay-right {
     transform: translateX(100%);
-  }
-  
-  .overlay.hide .overlay-left {
+}
+
+.overlay.hide .overlay-left {
     transform: translateX(0);
-  }
-  
-  .overlay.hide .overlay-right {
+}
+
+.overlay.hide .overlay-right {
     transform: translateX(0);
-  }
-  
-  /* ----------------------------------- */
+}
+
+/* ----------------------------------- */

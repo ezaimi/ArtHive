@@ -109,6 +109,8 @@ $conn->close();
 
 
 <body>
+
+
     <div class="artistProfile-rectangle"></div>
     <div class="artistProfile-circle"></div>
 
@@ -155,45 +157,60 @@ $conn->close();
 
     <div class="artist-navBar">
 
-        <div class="artworksBar"><a href="#artworksL">Artworks</a></div>
+        <div class="artworksBar" onclick="toggleSection('artworksSection')"><a href="#artworksL" id="artworksLink">Artworks</a></div>
 
 
-        <div class="createBar"><a href="#createL">Create</a></div>
+        <div class="createBar" onclick="toggleSection('createSection')"><a href="#createL" id="createLink">Create</a></div>
 
 
-        <div class="profitBar"><a href="#profitL">Profit</a></div>
+        <div class="profitBar" onclick="toggleSection('profitSection')"><a href="#profitL" id="profitLink">Profit</a></div>
 
 
-        <div class="logoutBar"><a href="#logoutL">Log Out</a></div>
+        <div class="logoutBar" onclick="toggleSection('logoutSection')"><a href="#logoutL" id="logoutLink">Log Out</a></div>
 
 
     </div>
 
-
-    
-    <div class="create-container" style="margin-left: 25em; height: 400px; margin-right: 5em; margin-top: -10em">
-    <div class="inputs">
-        <input type="text" placeholder="Title" name="sell-title" id="sell-title">
-        <select name="sell-category" id="sell-category">
-            <option value="" disabled selected>Category</option>
-            <option value="painting">Painting</option>
-            <option value="photography">Photography</option>
-            <option value="sculpture">Sculpture</option>
-            <option value="pottery">Pottery</option>
-            <option value="quilling">Quilling</option>
-        </select>
-        <textarea placeholder="Description" name="sell-description" id="sell-description" rows="5"></textarea>
-        <input type="text" placeholder="Price" name="sell_price" id="sell_price">
-        <button id="sell_save-button">Save</button>
+    <div id="artworksSection" class="section">
+    <!-- Artworks section content -->
     </div>
-    <div class="product-upload-photo">
-        <img src="../Sell/Sell_image/upload-icon.png" id="profileImage" alt="Profile Picture">
-        <input type="file" id="imageUpload" accept="image/*">
-    </div>
-    <p class="uploadImagePara">Upload Image</p>
-</div>
 
-   
+
+
+    <div id="createSection" class="section" style="display: none;">
+        <div class="create-container" style="margin-left: 25em; height: 400px; margin-right: 5em; margin-top: -10em">
+            <div class="inputs">
+                <input type="text" placeholder="Title" name="sell-title" id="sell-title">
+                <select name="sell-category" id="sell-category">
+                    <option value="" disabled selected hidden>Category</option>
+                    <option value="painting">Painting</option>
+                    <option value="photography">Photography</option>
+                    <option value="sculpture">Sculpture</option>
+                    <option value="pottery">Pottery</option>
+                    <option value="quilling">Quilling</option>
+                </select>
+                <textarea placeholder="Description" name="sell-description" id="sell-description" rows="5"></textarea>
+            
+                <input type="text" placeholder="Price" name="sell_price" id="sell_price">
+                <button id="sell_save-button">Save</button>
+            </div>
+            <div class="product-upload-photo">
+                <img src="../Sell/Sell_image/upload-icon.png" id="profileImage" alt="Profile Picture">
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <p class="uploadImagePara">Upload Image</p>
+        </div>
+    </div>
+
+
+    <div id="profitSection" class="section">
+    <!-- Profit section content -->
+    </div>
+
+
+    <div id="logoutSection" class="section">
+    <!-- Logout section -->
+    </div>
 
 
 
@@ -202,6 +219,7 @@ $conn->close();
     <script src="./saveName.js"></script>
     <script src="./updateName.js"></script>
     <script src="../Sell/Sell_js/upload.js"></script>
+    <script src="../Sell/Sell_js/showCreate.js"></script>
 </body>
 
 </html>
