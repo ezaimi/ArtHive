@@ -11,7 +11,19 @@
 
 
 }
-
+#logo1{
+  position: relative;
+  top:-21vh;
+  left:30px;
+}
+.coment-row {
+  display: flex;
+  position: relative;
+  top: 9vh;
+  justify-content: space-between;
+  margin: 40px;
+  margin-bottom: 265px;
+}
 .navDiv {
   display: flex;
   position: relative;
@@ -105,7 +117,9 @@
   font-size: 15px;
   color: #282727;
 }
-
+#client{
+position: relative;
+}
 .dot {
   position: relative;
 
@@ -219,12 +233,14 @@ video::-webkit-media-controls {
 }
 
 .beforeFooter {
-  width: 100%;
   position: relative;
-  top: -93px;
+
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  top: 0vh;
+ 
 }
 
 

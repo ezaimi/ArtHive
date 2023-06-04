@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
  
   <title>ArtHive</title>
   <!--font--> 
@@ -85,14 +85,15 @@
       </div>
 
       <span class="search_menu">
-        <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar" />
+        <!-- <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar" />
         <span class="icon"><ion-icon name="ellipsis-horizontal"></ion-icon></span>
         <span class="line">
           <ion-icon name="remove-outline"></ion-icon>
         </span>
         <span class="searchIcon">
           <ion-icon name="search-circle-outline"></ion-icon>
-        </span>
+        </span> -->
+        <img src="./images/home_img/logo1.png" alt="" id="logo1">
       </span>
 
 
@@ -484,7 +485,7 @@
       </div>
     </div>
     <div class="beforeFooter">
-      <h1>What Clients Say</h1> 
+      <h1 id="client">What Clients Say</h1> 
     </div>
     <div class="coment-row"> 
       <div class="comment-col">
@@ -531,10 +532,7 @@
           </div>
         </div>
         <p>
-          “이 작품은 완벽한 조화입니다
-          전통과 혁신의 그것
-          고전적인 기술에 경의를 표하면서
-          모던한 요소를 접목한.”
+          “This piece is a perfect blend of tradition and innovation that pays homage to classical technology while incorporating modern elements.”
         </p>
       </div>
     </div>
