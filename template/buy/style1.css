@@ -473,7 +473,7 @@ border-color: #f1f1f1; /* Set the desired border color */
   text-align: center;
   transition: transform 0.3s ease;
   position: relative;
-  transition:trabsform 1s ease;
+  /* transition:trabsform 1s ease; */
 }
 
 .item img {
@@ -481,10 +481,10 @@ border-color: #f1f1f1; /* Set the desired border color */
   height: auto; /* Preserve the original aspect ratio */
 }
 
-
+/* 
 .item:hover {
   transform: scale(1.1);
-}
+} */
 
 .item:hover ion-icon {
   display: block;
