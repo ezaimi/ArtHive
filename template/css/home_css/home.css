@@ -11,6 +11,10 @@
 
 
 }
+.close{
+  position: relative;
+  top: 20px;
+}
 #logo1{
   position: relative;
   top:-21vh;
@@ -106,7 +110,14 @@
 .navDiv .homeHover a {
   transition: 0.3s;
 }
-
+#cl{
+  top: -52vh;
+  left: 30vh;
+  position: relative;
+  background-color: transparent;
+  color: black;
+  border: transparent;
+}
 .navDiv .homeHover a.active {
   border: 1px solid black;
   border-radius: 25px;
@@ -118,7 +129,8 @@
   color: #282727;
 }
 #client{
-position: relative;
+  top: 5vh;
+  position: relative;
 }
 .dot {
   position: relative;
@@ -334,4 +346,14 @@ video::-webkit-media-controls {
   position: relative;
 
   right: -110px;
+}
+
+
+#about_getReady:hover a.getr {
+  color: white;
+}
+
+#about_getReady a.getr {
+  color: #d15b2e;
+  text-decoration: none;
 }
