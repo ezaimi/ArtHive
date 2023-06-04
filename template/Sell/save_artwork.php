@@ -2,9 +2,9 @@
 session_start();
 
 if (isset($_SESSION["user_id"])) {
-    $mySqli = require __DIR__ . "../../LogInBackEnd/database.php";
+    $mysqli = require __DIR__ . "../../LogInBackEnd/database.php";
     $sql = "SELECT * FROM artist_table WHERE artist_id = {$_SESSION["user_id"]}";
-    $result = $mySqli->query($sql);
+    $result = $mysqli->query($sql);
 
     $user = $result->fetch_assoc();
 }
@@ -36,6 +36,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare('INSERT INTO artwork (artwork_name, artwork_category, artwork_description, artwork_price, artwork_image) VALUES (?, ?, ?, ?, ?)');
     $stmt->execute([$title, $category, $description, $price, $image]);
 
+    // Retrieve the last inserted artwork_id
+    $artwork_id = $pdo->lastInsertId();
+
+    // Prepare the SQL statement to insert the artist and artwork association into the 'artist_artwork' table
+    $mergeSql = "INSERT INTO artist_artwork (artistJoin_id, artworkJoin_id) VALUES (?, ?)";
+    $stmt1 = $pdo->prepare($mergeSql);
+    $stmt1->execute([$user['artist_id'], $artwork_id]);
+
     // Move the uploaded image file to a desired location
     $targetDir = __DIR__ . '/artworks/'; // Specify the directory where you want to save the uploaded images
     $targetFile = $targetDir . basename($_FILES['image']['name']);
@@ -45,6 +53,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo 'Artwork saved successfully';
 }
 ?>
-
-
-
