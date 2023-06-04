@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
  
   <title>ArtHive</title>
   <!--font--> 
@@ -84,16 +84,7 @@
         
       </div>
 
-      <span class="search_menu">
-        <input type="searchBar" name="searchBar" id="searchBar" placeholder="SearchBar" />
-        <span class="icon"><ion-icon name="ellipsis-horizontal"></ion-icon></span>
-        <span class="line">
-          <ion-icon name="remove-outline"></ion-icon>
-        </span>
-        <span class="searchIcon">
-          <ion-icon name="search-circle-outline"></ion-icon>
-        </span>
-      </span>
+ 
 
 
 
@@ -107,8 +98,11 @@
   <!--CUSTOMERS login/register gui-->
 
   <div class="popup" id="popup">
+
     <div class="form-container register-container" method="post">
       <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp">
+      <span class="yclose" onclick="closePopup()">x</span>
+
         <h1 id="popup-h1" style="color: #292929;">Discover and Explore Art.</h1>
       <div class="z">
         <input type="text" placeholder="Name" name="name" id="name">
@@ -149,25 +143,36 @@
   </div>
 
     <div class="overlay-container">
-      <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
+
       <div class="overlay">
+
         <div class="overlay-panel overlay-left">
+
           <h1 class="title">Already have an Account?</h1>
+
           <p>Log in and immerse yourself in the art world!</p>
           <button class="ghost" id="login">Login
             <i class="lni lni-arrow-left login"></i>
           </button>
+
         </div>
         <div class="overlay-panel overlay-right">
+          <span class="xclose" onclick="closePopup()">x</span>
           <h1 class="title">Start your journey!</h1>
+
           <p>No account yet? Join ArtHive Community as an Art Lover.</p>
           <button class="ghost" id="register">Register
             <i class="lni lni-arrow-right register"></i>
           </button>
+
+          
+
+          <!-- <button id="cl">x</button> -->
+
         </div>
       </div>
     </div>
-
+ 
   </div>
 
   <!--ARTISTS login/register gui-->
@@ -175,6 +180,8 @@
   <div class="popup2" id="popup2">
   <div class="form-container register-container" method="post">
     <form action="./LogInBackEnd/signUp_process11.php" method="post" id="signUp2">
+    <span class="aclose" onclick="closePopup2()">x</span>
+
       <h1 id="popup2-h1" style="color: #292929;">Join as an Artist</h1>
       <div class="z">
         <input type="text" placeholder="Name" name="name" id="name2">
@@ -220,6 +227,7 @@
       <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
       <div class="overlay2">
         <div class="overlay-panel overlay-left">
+
           <h1 class="title">Already have an Account?</h1>
           <p>Log in and immerse yourself in the art world!</p>
           <button class="ghost" id="login2">Login
@@ -227,6 +235,9 @@
           </button>
         </div>
         <div class="overlay-panel overlay-right">
+        <span class="cclose" onclick="closePopup2()">x</span>
+
+
           <h1 class="title">Start your journey!</h1>
           <p>No account yet? Unleash Your Artistic Potential!</p>
           <button class="ghost" id="register2">Register
@@ -312,7 +323,8 @@
             with ArtHive!
           </h3>
           <button id="about_getReady" style="font-family: 'myFont'">
-            Get Ready
+          <!-- <a href="#" id="BuyPage" onclick="toggleBuy()"class="getr">Get Ready</a> -->
+          <a href="#" id="BuyPage" onclick="toggleBuy()" class="getr" style="text-decoration: none;">Get Ready</a>
           </button>
         </div>
 
@@ -484,7 +496,7 @@
       </div>
     </div>
     <div class="beforeFooter">
-      <h1>What Clients Say</h1> 
+      <h1 id="client">Art Enthusiasts</h1> 
     </div>
     <div class="coment-row"> 
       <div class="comment-col">
@@ -531,10 +543,7 @@
           </div>
         </div>
         <p>
-          “이 작품은 완벽한 조화입니다
-          전통과 혁신의 그것
-          고전적인 기술에 경의를 표하면서
-          모던한 요소를 접목한.”
+          “This piece is a perfect blend of tradition and innovation that pays homage to classical technology while incorporating modern elements.”
         </p>
       </div>
     </div>
@@ -697,6 +706,42 @@ navLinks.forEach(link => {
 
 // Set the 'active' class on the home link by default
 document.getElementById('homeLink').classList.add('active');
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var closeButton = document.getElementById('cl');
+//   var overlay = document.querySelector('.overlay-container .overlay');
+
+//   closeButton.addEventListener('click', function() {
+//     overlay.classList.add('hide');
+//   });
+// });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   var closeButton = document.getElementById('cl');
+//   var popup = document.getElementById('popup');
+
+//   closeButton.addEventListener('click', function() {
+//     popup.style.display = 'none';
+   
+//   });
+// });
+
+function closePopup() {
+  var popup = document.getElementById('popup');
+  var wholePage = document.getElementById('blur');
+  popup.classList.remove('active');
+  wholePage.classList.remove('active');
+}
+
+function closePopup2() {
+  var popup2 = document.getElementById('popup2');
+  var wholePage = document.getElementById('blur');
+  popup2.classList.remove('active2');
+  wholePage.classList.remove('active2');
+}
 
 
   </script>

@@ -30,6 +30,7 @@ if (isset($_FILES['profile-upload'])) {
     echo 'Era';
     if ($fileError === UPLOAD_ERR_OK) {
         // Define the secure directory to store profile pictures (outside of web root)
+        
         $uploadDir = __DIR__ . '/profile-pics/';
 
         // Generate a unique filename
@@ -41,15 +42,16 @@ if (isset($_FILES['profile-upload'])) {
         echo 'Hello';
         print_r ($destination);
         if (move_uploaded_file($fileTmpName, $destination)) {
+            $fileName = basename($fileName); // Extract only the file name from the full path
             // Update the artist_table with the new profile picture
-            $sql = "UPDATE artist_table SET artist_profilepic = '$destination' WHERE artist_id = $artistID";
+            $sql = "UPDATE artist_table SET artist_profilepic = '$fileName' WHERE artist_id = $artistID";
             echo $sql;
            
 
             if ($conn->query($sql) === TRUE) {
 
                 // Successful update
-                $_SESSION['profile_picture'] = $destination;
+                $_SESSION['profile_picture'] = $fileName;
                 echo "success";
             } else {
                 // Error updating record
@@ -64,6 +66,9 @@ if (isset($_FILES['profile-upload'])) {
         echo "Error uploading file";
     }
 }
+
+
+ 
 
 // Close the database connection
 $conn->close();
@@ -101,9 +106,12 @@ $conn->close();
     <!--CSS files here-->
     <link rel="stylesheet" href="./artist_profile.css" />
     <link rel="stylesheet" href="../Sell/Sell_css/create.css">
+    <link rel="stylesheet" href="../Sell/Sell_css/artworkNew.css">
 
 
 <body>
+
+
     <div class="artistProfile-rectangle"></div>
     <div class="artistProfile-circle"></div>
 
@@ -111,14 +119,23 @@ $conn->close();
     <div class="profile-pic-container">
         <div class="profile-pic">
             <!-- Display the uploaded profile picture here -->
-            <img id="profile-img" src="" alt=".">
+            <?php if (!empty($user["artist_profilepic"])): ?>
+                <img id="profile-img" src="./profile-pics/<?=$user["artist_profilepic"] ?>" alt="Profile Picture">
+            <?php else: ?>
+                <img id="profile-img" src="uploadLogo-removebg-preview.png" alt="Default Profile Picture">
+            <?php endif; ?>
         </div>
         <input type="file" id="profile-upload" accept="image/*">
-        <label for="profile-upload" id="upload-label"><i class="fas fa-upload"><span class="icon">
-                    <img src="uploadLogo-removebg-preview.png" alt="Icon Image">
-                </span></i></label>
+        <label for="profile-upload" id="upload-label">
+            <i class="fas fa-upload">
+            
+                <span class="icon"></span>
+            </i>
+        </label>
     </div>
-    </form>
+</form>
+
+
     <div id="artistContainer">
         <div id="artistName"><?=$user["artist_name"] ?></div>
         <!-- <div id="artistSurname"></div> -->
@@ -141,45 +158,68 @@ $conn->close();
 
     <div class="artist-navBar">
 
-        <div class="artworksBar"><a href="#artworksL">Artworks</a></div>
+        <div class="artworksBar" onclick="toggleSection(artworksLink, artworksSection)"><a href="#artworksL" id="artworksLink">Artworks</a></div>
 
 
-        <div class="createBar"><a href="#createL">Create</a></div>
+        <div class="createBar" onclick="toggleSection(createLink, createSection)"><a href="#createL" id="createLink">Create</a></div>
 
 
-        <div class="profitBar"><a href="#profitL">Profit</a></div>
+        <div class="profitBar" onclick="toggleSection(profitLink, profitSection)"><a href="#profitL" id="profitLink">Profit</a></div>
 
 
-        <div class="logoutBar"><a href="#logoutL">Log Out</a></div>
+        <div class="logoutBar" onclick="toggleSection(logoutLink, logoutSection)"><a href="#logoutL" id="logoutLink">Log Out</a></div>
 
 
     </div>
 
+    <div id="artworksSection" class="section">
+    <!-- Artworks section content -->
+        <div class="new-artist-div">
+                <div class="motivation">
+                "Start creating. Inspire the world."
+                </div>
 
-    
-    <div class="create-container" style="margin-left: 25em; height: 400px; margin-right: 5em; margin-top: -10em">
-    <div class="inputs">
-        <input type="text" placeholder="Title" name="sell-title" id="sell-title">
-        <select name="sell-category" id="sell-category">
-            <option value="" disabled selected>Category</option>
-            <option value="painting">Painting</option>
-            <option value="photography">Photography</option>
-            <option value="sculpture">Sculpture</option>
-            <option value="pottery">Pottery</option>
-            <option value="quilling">Quilling</option>
-        </select>
-        <textarea placeholder="Description" name="sell-description" id="sell-description" rows="5"></textarea>
-        <input type="text" placeholder="Price" name="sell_price" id="sell_price">
-        <button id="sell_save-button">Save</button>
-    </div>
-    <div class="product-upload-photo">
-        <img src="../Sell/Sell_image/upload-icon.png" id="profileImage" alt="Profile Picture">
-        <input type="file" id="imageUpload" accept="image/*">
-    </div>
-    <p class="uploadImagePara">Upload Image</p>
-</div>
+        </div>
 
-   
+        <button id="get-started-btn">Get Started</button>
+    </div>
+
+
+
+    <div id="createSection" class="section">
+        <div class="create-container" style="margin-left: 25em; height: 400px; margin-right: 5em; margin-top: -10em">
+            <div class="inputs">
+                <input type="text" placeholder="Title" name="sell-title" id="sell-title">
+                <select name="sell-category" id="sell-category">
+                    <option value="" disabled selected hidden>Category</option>
+                    <option value="painting">Painting</option>
+                    <option value="photography">Photography</option>
+                    <option value="sculpture">Sculpture</option>
+                    <option value="pottery">Pottery</option>
+                    <option value="quilling">Quilling</option>
+                </select>
+                <textarea placeholder="Description" name="sell-description" id="sell-description" rows="5"></textarea>
+            
+                <input type="text" placeholder="Price" name="sell_price" id="sell_price">
+                <button id="sell_save-button">Save</button>
+            </div>
+            <div class="product-upload-photo">
+                <img src="../Sell/Sell_image/upload-icon.png" id="profileImage" alt="Profile Picture">
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <p class="uploadImagePara"></p>
+        </div>
+    </div>
+
+
+    <div id="profitSection" class="section">
+    <!-- Profit section content -->
+    </div>
+
+
+    <div id="logoutSection" class="section">
+    <!-- Logout section -->
+    </div>
 
 
 
@@ -188,6 +228,7 @@ $conn->close();
     <script src="./saveName.js"></script>
     <script src="./updateName.js"></script>
     <script src="../Sell/Sell_js/upload.js"></script>
+    <script src="../Sell/Sell_js/showCreate.js"></script>
 </body>
 
 </html>

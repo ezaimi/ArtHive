@@ -59,10 +59,9 @@ header .shopping span{
 }
 .list .item {
   text-align: left;
-  padding: 11px;
+  padding: 33px;
   letter-spacing: 1px;
   height: 134px;
- 
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -72,11 +71,11 @@ header .shopping span{
 }
 
 .list .item .title{
-  margin-top: 93px;
+  margin-top: 85px;
   font-weight: 600;
 }
 .list .item .price{
-  margin: 10px;
+  margin: 0px;
 }
 .list .item button{
   background-color: transparent;
@@ -474,7 +473,7 @@ border-color: #f1f1f1; /* Set the desired border color */
   text-align: center;
   transition: transform 0.3s ease;
   position: relative;
-  transition:trabsform 1s ease;
+  /* transition:trabsform 1s ease; */
 }
 
 .item img {
@@ -482,10 +481,10 @@ border-color: #f1f1f1; /* Set the desired border color */
   height: auto; /* Preserve the original aspect ratio */
 }
 
-
+/* 
 .item:hover {
   transform: scale(1.1);
-}
+} */
 
 .item:hover ion-icon {
   display: block;
@@ -493,10 +492,10 @@ border-color: #f1f1f1; /* Set the desired border color */
 
 .item .title,
 .item .price {
-  position: absolute;
+  position: relative;
   bottom: -52px;
   left: -27px;
-  transform: translate(-10px, 31px); 
+  transform: translate(-3px, 40px); 
   color: black;
   padding:-3px 10px;
   text-align: left;
@@ -605,8 +604,8 @@ ion-icon {
 
 .item .buttons {
   position: absolute;
-  bottom: -10.5vh;
-  left: 114px;
+  bottom: -5.5vh;
+  left: 117px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -633,13 +632,13 @@ ion-icon {
 
 .left-button {
   position: relative;
-  left: 153vh;
-  top: 31vh;
+  left: 154vh;
+  top: 28vh;
 }
 
 .right-button {
-  right: 13px;
-  top: 32vh;
+  right: 74px;
+  top: 28vh;
 }
 .r2,
 .l2{
@@ -652,12 +651,12 @@ ion-icon {
   background-color: transparent;
   position: relative;
   left: 140vh;
-  top: 70vh;
+  top: 67vh;
   right: -46vh;
 }
 .l2{
   background-color: transparent;
   position: relative;
-  left: -27vh;
-  top: 70vh;
+  left: -26vh;
+  top: 67vh;
 }

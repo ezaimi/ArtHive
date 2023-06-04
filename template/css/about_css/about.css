@@ -70,6 +70,7 @@
     background-color: #F1f1f1;
     border: 2px solid #d15b2e;
     color: #d15b2e;
+    text-decoration: none;
 }
 
 #about_getReady:hover {
@@ -78,4 +79,7 @@
     background-color: #d15b2e;
 
 }
-
+a.getr {
+    text-decoration: none;
+    color: #d15b2e;
+  }
