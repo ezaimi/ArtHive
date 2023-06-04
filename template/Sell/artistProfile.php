@@ -207,7 +207,7 @@ $conn->close();
                 <img src="../Sell/Sell_image/upload-icon.png" id="profileImage" alt="Profile Picture">
                 <input type="file" id="imageUpload" accept="image/*">
             </div>
-            <p class="uploadImagePara">Upload Image</p>
+            <p class="uploadImagePara"></p>
         </div>
     </div>
 
