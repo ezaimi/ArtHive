@@ -66,7 +66,7 @@
 
       <div class="navDiv">
         <div class="homeHover">
-          <a href="#home_area">Home</a>
+        <a href="#home_area" id="homeLink">Home</a>
         </div>
         <div class="aboutHover"><a href="#about_area">About</a>
         </div>
@@ -679,6 +679,25 @@
         this.classList.remove("navbarHovered");
       });
     }
+
+
+    // Get all the navigation links
+const navLinks = document.querySelectorAll('.navDiv a');
+
+// Add click event listeners to the navigation links
+navLinks.forEach(link => {
+  link.addEventListener('click', function(event) {
+    // Remove the 'active' class from all navigation links
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    // Add the 'active' class to the clicked navigation link
+    this.classList.add('active');
+  });
+});
+
+// Set the 'active' class on the home link by default
+document.getElementById('homeLink').classList.add('active');
+
 
   </script>
 

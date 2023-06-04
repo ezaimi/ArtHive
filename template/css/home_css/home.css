@@ -91,6 +91,15 @@
   transition: 0.3s;
 }
 
+.navDiv .homeHover a {
+  transition: 0.3s;
+}
+
+.navDiv .homeHover a.active {
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
 
 .searchButton i {
   font-size: 15px;
