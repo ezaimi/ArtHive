@@ -157,27 +157,30 @@ $conn->close();
 
     <div class="artist-navBar">
 
-        <div class="artworksBar" onclick="toggleSection('artworksSection')"><a href="#artworksL" id="artworksLink">Artworks</a></div>
+        <div class="artworksBar" onclick="toggleSection(artworksLink, artworksSection)"><a href="#artworksL" id="artworksLink">Artworks</a></div>
 
 
-        <div class="createBar" onclick="toggleSection('createSection')"><a href="#createL" id="createLink">Create</a></div>
+        <div class="createBar" onclick="toggleSection(createLink, createSection)"><a href="#createL" id="createLink">Create</a></div>
 
 
-        <div class="profitBar" onclick="toggleSection('profitSection')"><a href="#profitL" id="profitLink">Profit</a></div>
+        <div class="profitBar" onclick="toggleSection(profitLink, profitSection)"><a href="#profitL" id="profitLink">Profit</a></div>
 
 
-        <div class="logoutBar" onclick="toggleSection('logoutSection')"><a href="#logoutL" id="logoutLink">Log Out</a></div>
+        <div class="logoutBar" onclick="toggleSection(logoutLink, logoutSection)"><a href="#logoutL" id="logoutLink">Log Out</a></div>
 
 
     </div>
 
     <div id="artworksSection" class="section">
     <!-- Artworks section content -->
+        <div class="new-artist-div">
+
+        </div>
     </div>
 
 
 
-    <div id="createSection" class="section" style="display: none;">
+    <div id="createSection" class="section">
         <div class="create-container" style="margin-left: 25em; height: 400px; margin-right: 5em; margin-top: -10em">
             <div class="inputs">
                 <input type="text" placeholder="Title" name="sell-title" id="sell-title">

@@ -101,6 +101,8 @@
 
     <div class="form-container register-container" method="post">
       <form action="./LogInBackEnd/signUp_process.php" method="post" id="signUp">
+      <span class="yclose" onclick="closePopup()">x</span>
+
         <h1 id="popup-h1" style="color: #292929;">Discover and Explore Art.</h1>
       <div class="z">
         <input type="text" placeholder="Name" name="name" id="name">
@@ -155,6 +157,7 @@
 
         </div>
         <div class="overlay-panel overlay-right">
+          <span class="xclose" onclick="closePopup()">x</span>
           <h1 class="title">Start your journey!</h1>
 
           <p>No account yet? Join ArtHive Community as an Art Lover.</p>
@@ -177,6 +180,8 @@
   <div class="popup2" id="popup2">
   <div class="form-container register-container" method="post">
     <form action="./LogInBackEnd/signUp_process11.php" method="post" id="signUp2">
+    <span class="aclose" onclick="closePopup2()">x</span>
+
       <h1 id="popup2-h1" style="color: #292929;">Join as an Artist</h1>
       <div class="z">
         <input type="text" placeholder="Name" name="name" id="name2">
@@ -222,6 +227,7 @@
       <!--<a id="closeA" href="#" onclick="toggle()">x</a>-->
       <div class="overlay2">
         <div class="overlay-panel overlay-left">
+
           <h1 class="title">Already have an Account?</h1>
           <p>Log in and immerse yourself in the art world!</p>
           <button class="ghost" id="login2">Login
@@ -229,6 +235,9 @@
           </button>
         </div>
         <div class="overlay-panel overlay-right">
+        <span class="cclose" onclick="closePopup2()">x</span>
+
+
           <h1 class="title">Start your journey!</h1>
           <p>No account yet? Unleash Your Artistic Potential!</p>
           <button class="ghost" id="register2">Register
@@ -720,6 +729,19 @@ document.getElementById('homeLink').classList.add('active');
 //   });
 // });
 
+function closePopup() {
+  var popup = document.getElementById('popup');
+  var wholePage = document.getElementById('blur');
+  popup.classList.remove('active');
+  wholePage.classList.remove('active');
+}
+
+function closePopup2() {
+  var popup2 = document.getElementById('popup2');
+  var wholePage = document.getElementById('blur');
+  popup2.classList.remove('active2');
+  wholePage.classList.remove('active2');
+}
 
 
   </script>

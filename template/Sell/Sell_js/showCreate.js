@@ -1,64 +1,22 @@
-// const createBar = document.querySelector('.createBar');
-// const createSection = document.querySelector('.create-container');
-
-// createBar.addEventListener('click', function () {
-//     if (createSection.style.display === 'none') {
-//         createSection.style.display = 'block';
-//     } else {
-//         createSection.style.display = 'none';
-//     }
-// });
-
-
-
-
-// function toggleArtworks() {
-//     console.log("ok");
-//     var blur = document.getElementById('blur');
-//     blur.classList.toggle('active');
-
-//     /*popup-i*/
-//     var popup = document.getElementById('popup');
-//     popup.classList.toggle('active');
-// }
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const artworksLink = document.getElementById('artworksLink');
-//     const createLink = document.getElementById('createLink');
-//     const createSection = document.querySelector('.create-container');
-
-//     artworksLink.classList.add('active'); // Display Artworks link by default
-//     createSection.style.display = 'none'; // Hide create-container by default
-
-//     createLink.addEventListener('click', function (event) {
-//         event.preventDefault(); // Prevent default link behavior
-//         artworksLink.classList.remove('active'); // Remove active class from Artworks link
-//         createLink.classList.add('active'); // Add active class to Create link
-//         createSection.style.display = 'block'; // Display create-container
-//     });
-
-//     artworksLink.addEventListener('click', function (event) {
-//         event.preventDefault(); // Prevent default link behavior
-//         artworksLink.classList.add('active'); // Add active class to Artworks link
-//         createLink.classList.remove('active'); // Remove active class from Create link
-//         createSection.style.display = 'none'; // Hide create-container
-//     });
-// });
-
 function toggleSection(activeLink, section) {
     const links = document.querySelectorAll('.artist-navBar a');
     links.forEach(function (link) {
         link.classList.remove('active');
     });
-    activeLink.classList.add('active');
-
+    if (activeLink && activeLink.classList) {
+        activeLink.classList.add('active');
+    }
+    console.log("bc");
     const sections = document.querySelectorAll('.section');
     sections.forEach(function (section) {
         section.style.display = 'none';
     });
-    section.style.display = 'block';
+    if (section && section.style) {
+        section.style.display = 'block';
+    }
 }
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const artworksLink = document.getElementById('artworksLink');
@@ -77,21 +35,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     createLink.addEventListener('click', function (event) {
         event.preventDefault();
-        toggleSection(createLink, createSection);
+        toggleSection(createLink, createSection); // Pass the element itself as activeLink
+        console.log("Eriiiiiiiiiaaaaaaa");
     });
 
     artworksLink.addEventListener('click', function (event) {
         event.preventDefault();
-        toggleSection(artworksLink, artworksSection);
+        toggleSection(artworksLink, artworksSection); // Pass the element itself as activeLink
+        console.log("ErA");
     });
 
     profitLink.addEventListener('click', function (event) {
         event.preventDefault();
-        toggleSection(profitLink, profitSection);
+        toggleSection(profitLink, profitSection); // Pass the element itself as activeLink
+        console.log("ErAAAA");
     });
 
     logoutLink.addEventListener('click', function (event) {
         event.preventDefault();
-        toggleSection(logoutLink, logoutSection);
+        toggleSection(this, logoutSection); // Pass the element itself as activeLink
     });
 });
+
+
