@@ -133,6 +133,11 @@ textarea::placeholder {
   background-color: #292929;
   color: white;
   border: none;
+  cursor: pointer;
+}
+
+#sell_save-button:hover {
+  background-color: #111010;
 }
 
 

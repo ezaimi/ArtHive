@@ -19,6 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $price = $_POST['price'];
     $image = $_FILES['image']['name']; // Assuming the input file field has the name 'image'
 
+    echo "Title: " . $title . "\n";
+    echo "Description: " . $description . "\n";
+
     // Database connection
     $servername = 'localhost';
     $username = 'root';
