@@ -227,3 +227,26 @@ label[for="profile-upload"] {
     left: 7%;
 
 }
+
+
+
+#artworksSection{
+    width: 60% !important;
+    margin-left: 30em; 
+    margin-top: -130px;
+}
+
+
+    
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-row-gap: 40px;
+  }
+  
+  .rectangle {
+    width: 180px;
+    height: 250px;
+    background-color: #f1f1f1;
+  }

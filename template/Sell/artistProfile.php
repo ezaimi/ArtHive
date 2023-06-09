@@ -101,6 +101,8 @@ $conn->close();
             font-weight: normal;
             src: url('GlacialIndifference-Bold.woff') format('woff');
         }
+
+
     </style>
 
     <!--CSS files here-->
@@ -172,18 +174,36 @@ $conn->close();
 
     </div>
 
-    <div id="artworksSection" class="section">
-    <!-- Artworks section content -->
+    <!-- <div id="artworksSection" class="section">
+
         <div class="new-artist-div">
                 <div class="motivation">
                 "Start creating. Inspire the world."
                 </div>
-
         </div>
 
         <button id="get-started-btn">Get Started</button>
-    </div>
 
+    </div> -->
+
+    <div id="artworksSection" class="section">
+
+    <div class="container">
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+    <div class="rectangle"></div>
+  </div>
+
+</div>
 
 
     <div id="createSection" class="section">
