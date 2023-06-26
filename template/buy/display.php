@@ -16,70 +16,27 @@ session_start();
             color: #333;
             text-align: center;
             margin-bottom: 30px;
-            margin-top:-16px;
-            background-color:#f1f1f1;
-           
-            padding-top:42px;
-            padding-bottom:50px;
-
+            margin-top: -16px;
+            background-color: #f1f1f1;
+            padding-top: 42px;
+            padding-bottom: 50px;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            /* display:flex; */
-            /* flex-wrap:wrap; */
-            /* flex-basis:50%; */
-         
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            texr-align:left;
         }
 
-        li {
-            background-color: #fff;
-            padding: 35px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 96px;
-            width: 471px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-            /* display:flex;
-            flex-wrap:wrap;
-            flex-basis:50%; */
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
         }
 
-        li:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .product-info {
-            display: flex;
-            align-items: center;
-        }
-        
-
-        .product-info img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            margin-right: 20px;
-            border-radius: 67px;
-        }
-
-        .product-details {
-            flex: 1;
-           
-        }
-
-        .product-details h3 {
-            margin: 0;
-            color: #333;
-            font-size: 18px;
-        }
-
-        .product-details p {
-            margin: 5px 0;
-            color: #777;
-            font-size: 14px;
+        th {
+            background-color: #f1f1f1;
         }
 
         .total-amount {
@@ -87,61 +44,21 @@ session_start();
             margin-top: 30px;
             text-align: center;
             color: #333;
-            font-family:fantasy;
+            font-family: fantasy;
         }
-        .item-container {
-  /* display: flex; */
-  justify-content: space-between;
-}
-/* Per form  */
-    .payment-form {
-        background-color: #fff;
-        padding: 20px;
-        margin-top: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 6px;
-    }
-
-    .payment-form h2 {
-        margin-top: 0;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    .payment-form label {
-        display: block;
-        margin-bottom: 10px;
-        color: #333;
-    }
-
-    .payment-form input[type="text"] {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    .payment-form input[type="submit"] {
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    <label for="cvv">Postcode :</label>
-        <input type="text" id="postcode" name="postcode" required>
-
-
     </style>
 </head>
 <body>
-    <h1>𝕎𝕙𝕒𝕥𝕤 𝕚𝕟 𝕪𝕠𝕦𝕣 𝕔𝕒𝕣𝕥 ? </h1>
-    
-    <ul>
-         <?php
+    <h1>Product List</h1>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+            <th>Remove Item</th>
+        </tr>
+        <?php
         $sname = "localhost";
         $uname = "root";
         $pass = "";
@@ -175,9 +92,6 @@ session_start();
 
         // Check if any products exist
         if ($result->num_rows > 0) {
-            $counter=0;
-            $numColumns=2;
-            // Loop through each product
             while ($row = $result->fetch_assoc()) {
                 $productId = $row['id'];
                 $category = $row['category'];
@@ -187,87 +101,56 @@ session_start();
                 // Add the price to the total amount
                 $totalAmount += $price;
 
-                if ($counter % $numColumns == 0) {
-                    // Start a new row
-                    echo "<div class='row'>";
-                }
-
-                // Display the product details
-                echo "<li>";
-                echo "<div class='product-info'>";
-                echo "<img src='./image/$image' alt='Product Image'>";
-                echo "<div class='product-details'>";
-                echo "<h3>Product ID: $productId</h3>";
-                echo "<p>Category: $category</p>";
-                echo "<p>Price: $$price</p>";
-                echo "</div>";
-                echo "</div>";
-                echo "</li>";
-
-                if (($counter + 1) % $numColumns == 0 || ($counter == $result->num_rows - 1)) {
-                    // Close the row
-                    echo "</div>";
-                }
-        
-                $counter++;
+                echo "<tr>";
+                echo "<td><img src='./image/$image' alt='Product Image' width='100'></td>";
+                echo "<td>$$price</td>";
+                echo "<td><input type='number' name='quantity-$productId' value='1' min='1' onchange='updateTotalPrice(this, $price)'></td>";
+                echo "<td id='total-price-$productId'>$$price</td>";
+                echo "<td><button onclick='removeItem($productId)'>Delete</button></td>";
+                echo "</tr>";
+                
 
             }
         } else {
-            // No products found
-            echo "<li>No products found.</li>";
+            echo "<tr><td colspan='4'>No products found.</td></tr>";
         }
+
+        // Remove the item from the merge table for the logged-in user
+    // $removeSql = "DELETE FROM merge WHERE u_id = $user_id AND p_id = $productId";
+    // $mysqli->query($removeSql);
 
         // Close the database connection
         mysqli_close($mysqli);
         ?>
+    </table>
 
-        <!-- Display the total amount -->
-        <p class="total-amount">Total Amount: $<?php echo $totalAmount; ?></p>
-    </ul>
+    <p class="total-amount">Total Amount: $<?php echo $totalAmount; ?></p>
 
-<!-- Existing code -->
+    <script>
+        function updateTotalPrice(input, price) {
+            const quantity = parseInt(input.value);
+            const total = quantity * price;
+            const productId = input.name.split('-')[1];
+            const totalPriceElement = document.getElementById('total-price-' + productId);
+            totalPriceElement.textContent = '$' + total;
+        }
 
-<!-- Payment form -->
-<div class="payment-form">
-    <h2>Payment Details</h2>
-    <form action="process_payment.php" method="POST">
-        <label for="card-number">Card Number:</label>
-        <input type="text" id="card-number" name="card-number" required>
-        
-        <label for="cvv">Card Verification Value (CVV):</label>
-        <input type="text" id="cvv" name="cvv" required>
-
-        <Label>Shipping :</Label>
-        <!-- <p>
-            There are no shipping methods available.
-            Please double check your address, or contact us if you
-            need any help.
-        </p> -->
-
-        <label for="country">Select Country:</label>
-    <select id="country" name="country">
-        <option value="USA">United States</option>
-        <option value="CAN">Canada</option>
-        <option value="UK">United Kingdom</option>
-        <option value="AUS">Australia</option>
-        <option value="EU">Europe</option>
-        <!-- Add more country options as needed -->
-    </select>
-    <label for="cvv">Postcode :</label>
-        <input type="text" id="postcode" name="postcode" required>
-
-        <hr>
-        
-        <input type="submit" value="Pay Now">
-    </form>
-</div>
+//         function removeItem(productId) {
+//     // Remove the row from the table
+//     const row = document.getElementById('row-' + productId);
+//     row.remove();
+    
+//     // Update the total amount
+//     const totalPriceElement = document.getElementById('total-amount');
+//     const currentTotalAmount = parseFloat(totalPriceElement.textContent.substr(1));
+//     const priceElement = document.getElementById('total-price-' + productId);
+//     const price = parseFloat(priceElement.textContent.substr(1));
+//     const newTotalAmount = currentTotalAmount - price;
+//     totalPriceElement.textContent = '$' + newTotalAmount.toFixed(2);
+// }
 
 
-<script>
-        // Access the selected country value using JavaScript
-        var countrySelect = document.getElementById("country");
-        var selectedCountry = countrySelect.value;
-        console.log(selectedCountry); // You can use this value in your JavaScript code or send it to the server
+
     </script>
 </body>
 </html>
