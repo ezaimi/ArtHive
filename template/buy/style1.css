@@ -488,6 +488,8 @@ border-color: #f1f1f1; /* Set the desired border color */
 
 .item:hover ion-icon {
   display: block;
+  transform:scale(1.1);
+  transform: trasintion 3s ease;
 }
 
 .item .title,
